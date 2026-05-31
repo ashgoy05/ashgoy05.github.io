@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow:
+
+Sitemap: https://YOUR-DOMAIN.com/sitemap.xml
+
+User-agent: Mediapartners-Google
+Allow: /

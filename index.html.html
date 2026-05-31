@@ -1,0 +1,1828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ash's transparent journey to $1,000,000 — daily trade logs, portfolio updates, stock picks, and honest reflections on building wealth in the US market.">
+<meta name="keywords" content="millionaire journey blog, stock market investing, wealth building USA, $1 million goal, GEV AMD VRT CAT, retail investor portfolio, FIRE investing">
+<meta property="og:title" content="The $1 Million Journey — Ash's Wealth Blog">
+<meta property="og:description" content="Real trades. Real numbers. Real person. Follow my daily journey from $0 to $1,000,000.">
+<meta property="og:type" content="website">
+<title>The $1 Million Journey — Ash's Wealth Blog</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- ═══ GOOGLE ADSENSE ═══════════════════════════════════════════
+  Replace ca-pub-XXXXXXXXXXXXXXXX with your Publisher ID once approved.
+  Uncomment the line below:
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+═══════════════════════════════════════════════════════════════════ -->
+
+<style>
+/* ── Reset ─────────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#f5f3ee;color:#0d0d0d;line-height:1.6;min-height:100vh}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer;font-family:inherit;transition:all .15s}
+img{max-width:100%;display:block}
+
+/* ── Tokens ────────────────────────────────────────── */
+:root{
+  --ink:#0d0d0d;
+  --ink-2:#2d2d2d;
+  --ink-3:#5a5a5a;
+  --ink-4:#8a8a8a;
+  --surface:#f5f3ee;
+  --card:#ffffff;
+  --border:#e2ddd4;
+  --border-2:#eeebe3;
+  --green:#0a4023;
+  --green-mid:#15803d;
+  --green-light:#dcfce7;
+  --green-bg:#f0fdf4;
+  --red:#7f1d1d;
+  --red-mid:#dc2626;
+  --red-bg:#fef2f2;
+  --amber:#78350f;
+  --amber-mid:#d97706;
+  --amber-bg:#fffbeb;
+  --blue:#1e3a5f;
+  --blue-mid:#2563eb;
+  --blue-bg:#eff6ff;
+  --gold:#b45309;
+  --gold-bg:#fefce8;
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'DM Sans',system-ui,sans-serif;
+  --mono:'JetBrains Mono',monospace;
+  --r:8px;--rl:12px;--rxl:16px;
+  --sh:0 1px 4px rgba(0,0,0,.06);
+  --sh-md:0 4px 20px rgba(0,0,0,.08);
+  --sh-lg:0 8px 48px rgba(0,0,0,.12);
+}
+
+/* ── Layout ────────────────────────────────────────── */
+.wrap{max-width:1180px;margin:0 auto;padding:0 1.5rem}
+.grid-main{display:grid;grid-template-columns:1fr 360px;gap:2.5rem;align-items:start}
+@media(max-width:960px){.grid-main{grid-template-columns:1fr}}
+
+/* ── Typography ────────────────────────────────────── */
+h1,h2,h3,h4{font-family:var(--serif);line-height:1.2;color:var(--ink)}
+p{line-height:1.75;color:var(--ink-2)}
+
+/* ── AdSense placeholder slots ─────────────────────── */
+.ad-slot{background:var(--border-2);border:1.5px dashed var(--border);border-radius:var(--r);display:flex;align-items:center;justify-content:center;color:var(--ink-4);font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;text-align:center;flex-direction:column;gap:4px}
+.ad-slot small{font-size:10px;font-weight:400;opacity:.7}
+
+/* ── Tags ──────────────────────────────────────────── */
+.tag{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:3px 10px;border-radius:99px;white-space:nowrap}
+.tag-buy{background:var(--green-bg);color:var(--green)}
+.tag-sell{background:var(--red-bg);color:var(--red)}
+.tag-hold{background:var(--amber-bg);color:var(--amber)}
+.tag-sip{background:var(--blue-bg);color:var(--blue)}
+.tag-milestone{background:#faf5ff;color:#6b21a8}
+.tag-analysis{background:var(--blue-bg);color:var(--blue)}
+.tag-update{background:var(--green-bg);color:var(--green)}
+.tag-reflection{background:#fdf2f8;color:#9d174d}
+.tag-trade{background:var(--amber-bg);color:var(--amber)}
+.up{color:var(--green-mid);font-weight:600}
+.dn{color:var(--red-mid);font-weight:600}
+.mono{font-family:var(--mono)}
+
+/* ═══════════════════════════════════════════════════
+   TOPBAR
+═══════════════════════════════════════════════════ */
+.topbar{background:var(--ink);color:rgba(255,255,255,.75);font-size:12px;padding:7px 0;overflow:hidden}
+.topbar-inner{display:flex;justify-content:space-between;align-items:center;gap:2rem}
+.ticker-strip{display:flex;gap:2rem;align-items:center}
+.tick-item{display:flex;align-items:center;gap:6px;white-space:nowrap}
+.tick-name{opacity:.5;font-size:11px}
+.tick-val{font-family:var(--mono);font-weight:500;font-size:12px}
+.tick-chg{font-size:11px;font-weight:500}
+.topbar-date{opacity:.4;font-size:11px;white-space:nowrap}
+
+/* ═══════════════════════════════════════════════════
+   HEADER
+═══════════════════════════════════════════════════ */
+.site-header{background:var(--card);border-bottom:2px solid var(--ink);position:sticky;top:0;z-index:200;box-shadow:var(--sh)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0;gap:1.5rem}
+.logo-wrap{display:flex;flex-direction:column;gap:2px}
+.logo-name{font-family:var(--serif);font-size:1.45rem;font-weight:700;letter-spacing:-.02em;line-height:1}
+.logo-name span{color:var(--green)}
+.logo-sub{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-4);font-weight:500}
+.site-nav{display:flex;gap:2px;align-items:center}
+.nav-a{padding:6px 14px;border-radius:6px;font-size:13px;font-weight:500;color:var(--ink-3);transition:.15s}
+.nav-a:hover{background:var(--surface);color:var(--ink)}
+.nav-a.on{color:var(--ink);font-weight:600;background:var(--surface)}
+.hdr-btns{display:flex;gap:8px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:5px;padding:8px 18px;border-radius:var(--r);font-size:13px;font-weight:600;border:none;line-height:1;transition:.15s}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-ink:hover{background:var(--ink-2)}
+.btn-ghost{background:transparent;border:1.5px solid var(--border);color:var(--ink-3)}
+.btn-ghost:hover{border-color:var(--ink);color:var(--ink)}
+
+/* ═══════════════════════════════════════════════════
+   HERO
+═══════════════════════════════════════════════════ */
+.hero{background:var(--ink);color:#fff;padding:3.5rem 0 3rem;position:relative;overflow:hidden}
+.hero::before{content:'$';font-family:var(--serif);font-size:28rem;font-weight:700;color:rgba(255,255,255,.025);position:absolute;right:-3rem;top:-6rem;line-height:1;pointer-events:none;user-select:none}
+.hero-layout{display:grid;grid-template-columns:1fr 320px;gap:3rem;align-items:center}
+@media(max-width:768px){.hero-layout{grid-template-columns:1fr}}
+.hero-eye{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45);font-weight:600;margin-bottom:.75rem}
+.hero-h1{font-family:var(--serif);font-size:3rem;font-weight:700;line-height:1.1;margin-bottom:.75rem}
+.hero-h1 em{font-style:italic;color:rgba(255,255,255,.6)}
+.hero-sub{font-size:15px;color:rgba(255,255,255,.55);line-height:1.75;max-width:480px;margin-bottom:2rem}
+.hero-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.08);border-radius:var(--r);overflow:hidden}
+.kpi{background:rgba(255,255,255,.03);padding:1rem;text-align:center}
+.kpi-val{font-family:var(--serif);font-size:1.35rem;font-weight:700;line-height:1}
+.kpi-label{font-size:10px;text-transform:uppercase;letter-spacing:.07em;color:rgba(255,255,255,.35);margin-top:4px}
+
+/* Progress card inside hero */
+.prog-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--rl);padding:1.5rem}
+.prog-eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.4);margin-bottom:.75rem;font-weight:600}
+.prog-row{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:.75rem}
+.prog-current{font-family:var(--serif);font-size:2rem;font-weight:700;line-height:1}
+.prog-goal{font-size:13px;color:rgba(255,255,255,.4);font-weight:400}
+.prog-track{background:rgba(255,255,255,.12);border-radius:99px;height:8px;overflow:hidden;margin-bottom:.5rem}
+.prog-fill{background:linear-gradient(90deg,#4ade80,#86efac);border-radius:99px;height:100%;transition:width .8s cubic-bezier(.4,0,.2,1)}
+.prog-pct{font-size:12px;color:rgba(255,255,255,.45);text-align:right;margin-bottom:1.25rem}
+.milestones{display:flex;gap:3px}
+.ms{flex:1;text-align:center;font-size:9px;padding-top:5px;border-top:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.3);line-height:1.4;font-weight:500;transition:.2s}
+.ms.done{color:#86efac;border-color:#4ade80}
+.ms.now{color:#fbbf24;border-color:#fbbf24}
+
+/* ═══════════════════════════════════════════════════
+   COMPOSE
+═══════════════════════════════════════════════════ */
+.compose{background:var(--card);border:2px solid var(--ink);border-radius:var(--rl);overflow:hidden;margin-bottom:2rem;display:none}
+.compose.open{display:block}
+.compose-top{background:var(--ink);padding:.85rem 1.25rem;display:flex;align-items:center;justify-content:space-between}
+.compose-top h3{color:#fff;font-family:var(--sans);font-size:.8rem;text-transform:uppercase;letter-spacing:.09em;font-weight:700}
+.compose-x{background:none;border:none;color:rgba(255,255,255,.5);font-size:1.1rem;line-height:1;padding:2px 6px}
+.compose-x:hover{color:#fff}
+.type-row{display:flex;gap:6px;padding:.85rem 1.25rem;border-bottom:1px solid var(--border-2);background:var(--surface);flex-wrap:wrap}
+.tb{background:none;border:1.5px solid var(--border);border-radius:6px;padding:5px 14px;font-size:12px;font-weight:600;color:var(--ink-3)}
+.tb:hover,.tb.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.compose-body{padding:1.25rem;display:flex;flex-direction:column;gap:.85rem}
+.field label{display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-4);margin-bottom:.35rem}
+.field input,.field textarea,.field select{width:100%;border:1.5px solid var(--border);border-radius:var(--r);padding:.6rem .9rem;font-size:14px;font-family:var(--sans);color:var(--ink);background:var(--card);outline:none;transition:.15s}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--ink);box-shadow:0 0 0 3px rgba(13,13,13,.06)}
+.field textarea{resize:vertical;min-height:90px;line-height:1.7}
+.f-title{font-family:var(--serif);font-size:1.1rem}
+.cols-2{display:grid;grid-template-columns:1fr 1fr;gap:.85rem}
+.cols-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.85rem}
+.trade-box{background:var(--surface);border:1px solid var(--border-2);border-radius:var(--r);padding:1rem;display:none}
+.trade-box.open{display:block}
+.compose-foot{background:var(--surface);border-top:1px solid var(--border-2);padding:.85rem 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.compose-foot p{font-size:12px;color:var(--ink-4)}
+.btn-pub{background:var(--ink);color:#fff;border:none;border-radius:var(--r);padding:9px 24px;font-size:14px;font-weight:600}
+.btn-pub:hover{background:#333}
+
+/* ═══════════════════════════════════════════════════
+   POST CARDS
+═══════════════════════════════════════════════════ */
+.post-feed{display:flex;flex-direction:column;gap:1.25rem}
+
+/* Hero post */
+.post-hero{background:var(--card);border:1px solid var(--border);border-radius:var(--rl);overflow:hidden;display:grid;grid-template-columns:200px 1fr;margin-bottom:1.5rem;transition:box-shadow .2s}
+.post-hero:hover{box-shadow:var(--sh-md)}
+.ph-visual{background:var(--ink);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;min-height:180px}
+.ph-visual-bg{position:absolute;inset:0;font-family:var(--serif);font-size:5rem;display:flex;align-items:center;justify-content:center;opacity:.08;color:#fff;font-weight:700}
+.ph-icon{font-size:2rem;position:relative;z-index:1}
+.ph-body{padding:1.5rem}
+.ph-meta{display:flex;align-items:center;gap:8px;margin-bottom:.75rem;flex-wrap:wrap}
+.ph-title{font-family:var(--serif);font-size:1.35rem;font-weight:700;line-height:1.3;margin-bottom:.6rem;color:var(--ink)}
+.ph-title:hover{color:var(--green)}
+.ph-excerpt{font-size:13px;color:var(--ink-3);line-height:1.7;margin-bottom:1rem}
+.post-date{font-size:12px;color:var(--ink-4);font-weight:500}
+.ph-pv{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--green-mid)}
+
+/* Regular post card */
+.post-card{background:var(--card);border:1px solid var(--border);border-radius:var(--rl);padding:1.25rem;transition:box-shadow .2s,transform .2s}
+.post-card:hover{box-shadow:var(--sh-md);transform:translateY(-2px)}
+.pc-meta{display:flex;align-items:center;gap:8px;margin-bottom:.6rem;flex-wrap:wrap}
+.pc-title{font-family:var(--serif);font-size:1.05rem;font-weight:700;line-height:1.35;margin-bottom:.45rem;color:var(--ink)}
+.pc-title:hover{color:var(--green)}
+.pc-body{font-size:13px;color:var(--ink-3);line-height:1.7;margin-bottom:.85rem}
+.pc-foot{display:flex;align-items:center;justify-content:space-between;padding-top:.75rem;border-top:1px solid var(--border-2)}
+.reactions{display:flex;gap:6px}
+.rx{background:none;border:1px solid var(--border);border-radius:99px;padding:3px 10px;font-size:12px;color:var(--ink-4);display:flex;align-items:center;gap:4px;transition:.15s}
+.rx:hover{border-color:var(--green-mid);color:var(--green-mid);background:var(--green-bg)}
+.pc-tags{font-size:11px;color:var(--ink-4)}
+
+/* ═══════════════════════════════════════════════════
+   TRADE TABLE
+═══════════════════════════════════════════════════ */
+.trade-wrap{background:var(--card);border:1px solid var(--border);border-radius:var(--rl);overflow:hidden;margin-bottom:1.5rem}
+.trade-head{padding:.85rem 1.25rem;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.trade-head h3{font-family:var(--sans);font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--ink)}
+.filters{display:flex;gap:5px}
+.fb{background:none;border:1px solid var(--border);border-radius:5px;padding:4px 12px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-4);transition:.15s}
+.fb:hover,.fb.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.tbl-scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px}
+thead th{background:var(--surface);padding:.6rem 1rem;text-align:left;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-4);border-bottom:1px solid var(--border);white-space:nowrap}
+tbody td{padding:.7rem 1rem;border-bottom:1px solid var(--border-2);color:var(--ink-2);vertical-align:middle}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:hover{background:#fafaf8}
+.td-ticker{font-family:var(--mono);font-weight:600;font-size:13px;color:var(--ink)}
+.td-price{font-family:var(--mono);font-size:13px}
+.td-note{font-size:12px;color:var(--ink-4);max-width:220px;line-height:1.4}
+.no-rows{text-align:center;padding:3rem;color:var(--ink-4);font-style:italic;font-size:14px}
+
+/* ═══════════════════════════════════════════════════
+   SIDEBAR
+═══════════════════════════════════════════════════ */
+.sb{display:flex;flex-direction:column;gap:1.5rem}
+.sb-card{background:var(--card);border:1px solid var(--border);border-radius:var(--rl);overflow:hidden}
+.sb-head{padding:.85rem 1.25rem;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.5rem}
+.sb-head h4{font-family:var(--sans);font-size:.75rem;text-transform:uppercase;letter-spacing:.09em;font-weight:700;color:var(--ink-3)}
+.sb-body{padding:1.25rem}
+
+/* Stats grid */
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border)}
+.stat-cell{background:var(--card);padding:.9rem;text-align:center}
+.stat-val{font-family:var(--serif);font-size:1.25rem;font-weight:700;line-height:1}
+.stat-lbl{font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-4);margin-top:3px}
+
+/* Allocation bars */
+.alloc{margin-bottom:.85rem}
+.alloc:last-child{margin-bottom:0}
+.alloc-row{display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px}
+.alloc-name{color:var(--ink-2)}
+.alloc-pct{font-family:var(--mono);font-size:12px;font-weight:600}
+.alloc-bar{background:var(--border-2);border-radius:99px;height:5px;overflow:hidden}
+.alloc-fill{border-radius:99px;height:100%}
+
+/* Holdings */
+.holding{display:flex;justify-content:space-between;align-items:center;padding:.6rem 0;border-bottom:1px solid var(--border-2)}
+.holding:last-child{border-bottom:none}
+.h-left{}
+.h-ticker{font-family:var(--mono);font-weight:600;font-size:13px}
+.h-name{font-size:11px;color:var(--ink-4);margin-top:1px}
+.h-right{text-align:right}
+.h-pnl{font-weight:600;font-family:var(--mono);font-size:12px}
+.h-sub{font-size:11px;color:var(--ink-4)}
+
+/* Milestone tracker */
+.ms-list{list-style:none;padding-left:1.25rem;border-left:2px solid var(--border);display:flex;flex-direction:column;gap:0}
+.ms-item{position:relative;padding:.1rem 0 .9rem 1rem}
+.ms-item:last-child{padding-bottom:0}
+.ms-dot{position:absolute;left:-1.45rem;top:3px;width:12px;height:12px;border-radius:50%;background:var(--border);border:2px solid var(--card)}
+.ms-dot.done{background:var(--green-mid)}
+.ms-dot.now{background:var(--amber-mid);box-shadow:0 0 0 3px rgba(217,119,6,.2)}
+.ms-amt{font-family:var(--mono);font-size:13px;font-weight:600}
+.ms-status{font-size:11px;color:var(--ink-4);margin-top:1px}
+.ms-status.ok{color:var(--green-mid);font-weight:600}
+.ms-status.active{color:var(--amber-mid);font-weight:600}
+
+/* About card */
+.about-avatar{width:52px;height:52px;border-radius:50%;background:var(--ink);color:#fff;font-family:var(--serif);font-size:1.2rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.about-flex{display:flex;gap:.85rem;align-items:flex-start;margin-bottom:1rem}
+.about-info h4{font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:3px}
+.about-info p{font-size:13px;color:var(--ink-3);line-height:1.55}
+.social-btns{display:flex;gap:6px;flex-wrap:wrap}
+.social-btn{flex:1;min-width:0;background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:6px 8px;font-size:12px;font-weight:500;color:var(--ink-2);text-align:center;transition:.15s}
+.social-btn:hover{border-color:var(--ink);color:var(--ink)}
+
+/* Disclaimer */
+.disclaimer{background:var(--amber-bg);border:1px solid #fde68a;border-radius:var(--r);padding:.85rem 1rem;font-size:12px;color:var(--amber);line-height:1.6}
+.disclaimer strong{display:block;margin-bottom:2px;font-size:13px}
+
+/* ═══════════════════════════════════════════════════
+   PORTFOLIO VIEW
+═══════════════════════════════════════════════════ */
+.convictions{background:var(--card);border:1px solid var(--border);border-radius:var(--rl);overflow:hidden;margin-bottom:1.5rem}
+.conv-head{display:grid;grid-template-columns:80px 1fr 120px 100px 100px;gap:1rem;padding:.6rem 1.25rem;background:var(--surface);border-bottom:1px solid var(--border);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-4)}
+.conv-row{display:grid;grid-template-columns:80px 1fr 120px 100px 100px;gap:1rem;padding:.85rem 1.25rem;border-bottom:1px solid var(--border-2);align-items:center;transition:.1s}
+.conv-row:last-child{border-bottom:none}
+.conv-row:hover{background:#fafaf8}
+.conv-ticker{font-family:var(--mono);font-weight:700;font-size:14px}
+.conv-thesis{font-size:13px;color:var(--ink-3);line-height:1.45}
+.conv-theme{}
+.conv-conf{font-weight:600;font-size:13px}
+
+/* ═══════════════════════════════════════════════════
+   VIEWS
+═══════════════════════════════════════════════════ */
+.view{display:none}
+.view.on{display:block}
+.page-pad{padding:2.5rem 0 4rem}
+.sec-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.25rem;padding-bottom:.75rem;border-bottom:2px solid var(--ink)}
+.sec-head h2{font-family:var(--sans);font-size:.9rem;text-transform:uppercase;letter-spacing:.09em;font-weight:700}
+
+/* ═══════════════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════════════ */
+.site-footer{background:var(--ink);color:rgba(255,255,255,.5);padding:3rem 0 2rem}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:3rem;margin-bottom:2rem}
+@media(max-width:640px){.foot-grid{grid-template-columns:1fr}}
+.foot-brand .logo-name{color:#fff;display:block;margin-bottom:.6rem}
+.foot-brand p{font-size:13px;color:rgba(255,255,255,.35);line-height:1.7}
+.foot-col h5{color:#fff;font-size:.75rem;text-transform:uppercase;letter-spacing:.09em;font-weight:700;margin-bottom:.75rem}
+.foot-col ul{list-style:none}
+.foot-col li{margin-bottom:.4rem}
+.foot-col a{font-size:13px;color:rgba(255,255,255,.35);transition:.15s}
+.foot-col a:hover{color:#fff}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:1.25rem;display:flex;justify-content:space-between;font-size:12px;flex-wrap:wrap;gap:.5rem}
+.foot-legal{margin-top:.85rem;font-size:11px;color:rgba(255,255,255,.25);line-height:1.6}
+
+/* ── Support / Tip Card ─────────────────────────── */
+.tip-card{background:linear-gradient(135deg,#0a2e1e 0%,#0f4c35 100%);border-radius:var(--rl);padding:1.5rem;color:#fff;position:relative;overflow:hidden}
+.tip-card::before{content:'☕';position:absolute;right:-8px;bottom:-12px;font-size:5rem;opacity:.08;line-height:1;pointer-events:none}
+.tip-eyebrow{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.5);margin-bottom:.5rem}
+.tip-title{font-family:var(--serif);font-size:1.1rem;font-weight:700;line-height:1.3;margin-bottom:.4rem}
+.tip-sub{font-size:13px;color:rgba(255,255,255,.55);line-height:1.6;margin-bottom:1.1rem}
+.tip-raised{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:var(--r);padding:.75rem 1rem;margin-bottom:1.1rem}
+.tip-raised-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.35rem}
+.tip-raised-val{font-family:var(--serif);font-size:1.4rem;font-weight:700}
+.tip-raised-goal{font-size:12px;color:rgba(255,255,255,.4)}
+.tip-track{background:rgba(255,255,255,.15);border-radius:99px;height:6px;overflow:hidden}
+.tip-fill{background:linear-gradient(90deg,#4ade80,#86efac);border-radius:99px;height:100%;transition:width .6s ease}
+.tip-donors{font-size:11px;color:rgba(255,255,255,.4);margin-top:.4rem}
+.tip-amounts{display:flex;gap:6px;margin-bottom:.85rem;flex-wrap:wrap}
+.tip-amt-btn{background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.15);border-radius:6px;color:#fff;font-size:13px;font-weight:600;padding:6px 14px;transition:.15s;flex:1;min-width:0}
+.tip-amt-btn:hover,.tip-amt-btn.sel{background:rgba(255,255,255,.22);border-color:rgba(255,255,255,.4)}
+.tip-custom-row{display:flex;gap:6px;margin-bottom:.85rem}
+.tip-custom-input{flex:1;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.15);border-radius:6px;color:#fff;font-size:14px;padding:8px 12px;outline:none;font-family:var(--sans);transition:.15s}
+.tip-custom-input::placeholder{color:rgba(255,255,255,.3)}
+.tip-custom-input:focus{border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.12)}
+.tip-methods{display:flex;flex-direction:column;gap:7px}
+.tip-btn{width:100%;border:none;border-radius:7px;padding:10px 16px;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;gap:8px;transition:.15s;cursor:pointer;font-family:var(--sans)}
+.tip-btn-paypal{background:#0070ba;color:#fff}
+.tip-btn-paypal:hover{background:#005ea6}
+.tip-btn-venmo{background:#3d95ce;color:#fff}
+.tip-btn-venmo:hover{background:#2f7fb5}
+.tip-btn-cashapp{background:#00d54b;color:#fff}
+.tip-btn-cashapp:hover{background:#00b840}
+.tip-btn-bmc{background:#ffdd00;color:#0d0d0d}
+.tip-btn-bmc:hover{background:#f0ce00}
+.tip-btn-kofi{background:#ff5e5b;color:#fff}
+.tip-btn-kofi:hover{background:#e54e4b}
+.tip-toggle{background:none;border:none;color:rgba(255,255,255,.5);font-size:12px;text-align:center;width:100%;margin-top:.5rem;padding:4px;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.tip-toggle:hover{color:#fff}
+.tip-methods-extra{display:none}
+.tip-methods-extra.open{display:flex;flex-direction:column;gap:7px;margin-top:7px}
+.tip-note{font-size:11px;color:rgba(255,255,255,.3);text-align:center;margin-top:.75rem;line-height:1.5}
+
+/* ── Toast ─────────────────────────────────────── */
+.toast{position:fixed;bottom:1.5rem;right:1.5rem;background:var(--ink);color:#fff;padding:.75rem 1.25rem;border-radius:var(--r);font-size:14px;font-weight:500;z-index:999;transform:translateY(100px);opacity:0;transition:.3s;pointer-events:none;box-shadow:var(--sh-lg)}
+.toast.show{transform:translateY(0);opacity:1}
+
+/* ── Responsive ──────────────────────────────── */
+@media(max-width:768px){
+  .hero-h1{font-size:2.2rem}
+  .post-hero{grid-template-columns:1fr}
+  .ph-visual{min-height:100px}
+  .site-nav{display:none}
+  .hdr-btns .btn-ghost{display:none}
+  .cols-2,.cols-3{grid-template-columns:1fr}
+  .conv-head,.conv-row{grid-template-columns:70px 1fr 90px}
+  .conv-theme,.conv-conf{display:none}
+  .topbar-date{display:none}
+}
+@media(max-width:480px){
+  .ticker-strip{gap:1rem}
+  .tick-item:nth-child(n+3){display:none}
+}
+
+/* ── Visitor Counter ──────────────────── */
+.visitor-bar{background:var(--ink);color:rgba(255,255,255,.7);font-size:12px;padding:5px 0;text-align:center;border-bottom:1px solid rgba(255,255,255,.06)}
+.visitor-inner{display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap}
+.vis-item{display:flex;align-items:center;gap:5px}
+.vis-dot{width:7px;height:7px;border-radius:50%;background:#4ade80;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+.vis-num{font-family:var(--mono);font-weight:600;color:#fff}
+.vis-label{color:rgba(255,255,255,.4);font-size:11px}
+
+/* ── Weekly Poll ──────────────────────── */
+.poll-card{background:var(--card);border:1px solid var(--border);border-radius:var(--rl);overflow:hidden;margin-bottom:1.5rem}
+.poll-head{background:var(--ink);padding:.85rem 1.25rem;display:flex;align-items:center;justify-content:space-between}
+.poll-head h4{color:#fff;font-size:.8rem;text-transform:uppercase;letter-spacing:.09em;font-weight:700;font-family:var(--sans)}
+.poll-timer{font-size:11px;color:rgba(255,255,255,.45);font-family:var(--mono)}
+.poll-body{padding:1.25rem}
+.poll-q{font-family:var(--serif);font-size:1.05rem;font-weight:700;color:var(--ink);margin-bottom:1rem;line-height:1.35}
+.poll-options{display:flex;flex-direction:column;gap:.5rem;margin-bottom:1rem}
+.poll-opt{position:relative;border:1.5px solid var(--border);border-radius:var(--r);overflow:hidden;cursor:pointer;transition:.15s;background:var(--card)}
+.poll-opt:hover{border-color:var(--ink)}
+.poll-opt.voted{border-color:var(--green-mid);cursor:default}
+.poll-opt.voted.winner{border-color:var(--green-mid);background:var(--green-bg)}
+.poll-fill{position:absolute;left:0;top:0;bottom:0;background:var(--green-light);transition:width .6s cubic-bezier(.4,0,.2,1);z-index:0;border-radius:5px}
+.poll-opt.voted .poll-fill{background:var(--green-light)}
+.poll-opt.voted.winner .poll-fill{background:#bbf7d0}
+.poll-opt-inner{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;padding:.65rem .9rem}
+.poll-opt-label{font-size:14px;font-weight:500;color:var(--ink);display:flex;align-items:center;gap:.5rem}
+.poll-opt-pct{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--green-mid);opacity:0;transition:.2s}
+.poll-opt.voted .poll-opt-pct{opacity:1}
+.poll-meta{display:flex;justify-content:space-between;font-size:12px;color:var(--ink-4)}
+.poll-edit{background:none;border:1px solid var(--border);border-radius:5px;padding:3px 10px;font-size:11px;font-weight:600;color:var(--ink-4);margin-top:.75rem}
+.poll-edit:hover{border-color:var(--ink);color:var(--ink)}
+.poll-admin{background:var(--surface);border-top:1px solid var(--border-2);padding:.85rem 1.25rem;display:none}
+.poll-admin.open{display:block}
+.poll-admin-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-4);margin-bottom:.6rem}
+.poll-new-q{width:100%;border:1.5px solid var(--border);border-radius:var(--r);padding:.5rem .8rem;font-size:13px;font-family:var(--sans);margin-bottom:.5rem;outline:none}
+.poll-new-q:focus{border-color:var(--ink)}
+.poll-opts-edit{display:flex;flex-direction:column;gap:.4rem;margin-bottom:.5rem}
+.poll-opt-input{border:1.5px solid var(--border);border-radius:6px;padding:.4rem .7rem;font-size:13px;font-family:var(--sans);outline:none;width:100%}
+.poll-save-btn{background:var(--ink);color:#fff;border:none;border-radius:6px;padding:6px 18px;font-size:13px;font-weight:600}
+
+/* ── Benchmark Chart ──────────────────── */
+.bench-card{background:var(--card);border:1px solid var(--border);border-radius:var(--rl);overflow:hidden;margin-bottom:1.5rem}
+.bench-head{padding:.85rem 1.25rem;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.bench-head h3{font-family:var(--sans);font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700}
+.bench-legend{display:flex;gap:.85rem}
+.bl-item{display:flex;align-items:center;gap:.4rem;font-size:12px;font-weight:500;color:var(--ink-3)}
+.bl-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.bench-body{padding:1.25rem}
+.bench-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-bottom:1.25rem;border-radius:var(--r);overflow:hidden}
+.bstat{background:var(--card);padding:.75rem;text-align:center}
+.bstat-val{font-family:var(--mono);font-size:1rem;font-weight:700}
+.bstat-label{font-size:10px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-4);margin-top:2px}
+.bench-chart{position:relative;height:160px;margin-bottom:.5rem}
+.bench-svg{width:100%;height:100%}
+.bench-axis{font-size:10px;fill:var(--ink-4);font-family:'DM Sans',sans-serif}
+.bench-months{display:flex;justify-content:space-between;font-size:10px;color:var(--ink-4);padding:0 4px}
+
+/* ── Watchlist ────────────────────────── */
+.watch-card{background:var(--card);border:1px solid var(--border);border-radius:var(--rl);overflow:hidden;margin-bottom:1.5rem}
+.watch-head{padding:.85rem 1.25rem;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.watch-head h3{font-family:var(--sans);font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700}
+.watch-add-btn{background:none;border:1px solid var(--border);border-radius:5px;font-size:12px;font-weight:600;color:var(--ink-4);padding:4px 12px;transition:.15s}
+.watch-add-btn:hover{border-color:var(--ink);color:var(--ink)}
+.watch-item{border-bottom:1px solid var(--border-2);padding:1rem 1.25rem;transition:.15s}
+.watch-item:last-child{border-bottom:none}
+.watch-item:hover{background:#fafaf8}
+.watch-row1{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:.3rem}
+.watch-ticker{font-family:var(--mono);font-weight:700;font-size:14px}
+.watch-name{font-size:12px;color:var(--ink-4);margin-top:1px}
+.watch-right{text-align:right}
+.watch-alert{font-size:11px;font-weight:600}
+.watch-alert.above{color:var(--red-mid)}
+.watch-alert.below{color:var(--green-mid)}
+.watch-alert.watching{color:var(--amber-mid)}
+.watch-thesis{font-size:13px;color:var(--ink-3);line-height:1.6;margin-bottom:.5rem}
+.watch-tags{display:flex;gap:.4rem;flex-wrap:wrap}
+.watch-tag{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;padding:2px 7px;border-radius:99px;background:var(--surface);color:var(--ink-4);border:1px solid var(--border-2)}
+.watch-form{background:var(--surface);border-top:1px solid var(--border-2);padding:1rem 1.25rem;display:none}
+.watch-form.open{display:block}
+.wf-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-bottom:.6rem}
+.wf-input{border:1.5px solid var(--border);border-radius:6px;padding:.5rem .8rem;font-size:13px;font-family:var(--sans);outline:none;width:100%;background:var(--card)}
+.wf-input:focus{border-color:var(--ink)}
+.wf-full{grid-column:1/-1}
+.wf-save{background:var(--ink);color:#fff;border:none;border-radius:6px;padding:7px 18px;font-size:13px;font-weight:600}
+.wf-cancel{background:none;border:1px solid var(--border);border-radius:6px;padding:7px 14px;font-size:13px;color:var(--ink-3);margin-left:6px}
+
+/* ── Glossary ─────────────────────────── */
+.gloss-search{width:100%;border:1.5px solid var(--border);border-radius:var(--r);padding:.65rem 1rem;font-size:14px;font-family:var(--sans);outline:none;background:var(--card);margin-bottom:1.25rem;transition:.15s}
+.gloss-search:focus{border-color:var(--ink)}
+.gloss-alpha{display:flex;gap:.3rem;flex-wrap:wrap;margin-bottom:1.25rem}
+.alpha-btn{background:none;border:1px solid var(--border);border-radius:4px;width:28px;height:28px;font-size:12px;font-weight:600;color:var(--ink-4);transition:.15s}
+.alpha-btn:hover,.alpha-btn.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.gloss-group{margin-bottom:2rem}
+.gloss-letter{font-family:var(--serif);font-size:2rem;font-weight:700;color:var(--border);border-bottom:2px solid var(--border);padding-bottom:.25rem;margin-bottom:1rem;line-height:1}
+.gloss-item{padding:.85rem 0;border-bottom:1px solid var(--border-2)}
+.gloss-item:last-child{border-bottom:none}
+.gloss-term{font-weight:700;font-size:15px;color:var(--ink);margin-bottom:.3rem;display:flex;align-items:center;gap:.5rem}
+.gloss-category{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;padding:2px 7px;border-radius:99px;background:var(--blue-bg);color:var(--blue)}
+.gloss-def{font-size:14px;color:var(--ink-3);line-height:1.7}
+.gloss-example{font-size:13px;color:var(--ink-4);font-style:italic;margin-top:.3rem;padding-left:.75rem;border-left:2px solid var(--border)}
+.gloss-empty{text-align:center;padding:3rem;color:var(--ink-4);font-style:italic;font-size:14px}
+</style>
+</head>
+<body>
+
+<!-- Visitor Counter Bar -->
+<div class="visitor-bar">
+  <div class="visitor-inner">
+    <div class="vis-item"><div class="vis-dot"></div><span class="vis-num" id="vis-live">—</span><span class="vis-label">reading now</span></div>
+    <div class="vis-item"><span class="vis-num" id="vis-today">—</span><span class="vis-label">visits today</span></div>
+    <div class="vis-item"><span class="vis-num" id="vis-total">—</span><span class="vis-label">total visitors</span></div>
+    <div class="vis-item"><span class="vis-label">Journey started</span><span class="vis-num" style="color:rgba(255,255,255,.6)">Jan 2023</span></div>
+  </div>
+</div>
+
+<!-- Ticker -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="topbar-inner">
+      <div class="ticker-strip">
+        <div class="tick-item"><span class="tick-name">S&P 500</span><span class="tick-val" id="t-sp">—</span><span class="tick-chg" id="t-sp-c"></span></div>
+        <div class="tick-item"><span class="tick-name">NASDAQ</span><span class="tick-val" id="t-nq">—</span><span class="tick-chg" id="t-nq-c"></span></div>
+        <div class="tick-item"><span class="tick-name">GEV</span><span class="tick-val" id="t-gev">—</span><span class="tick-chg" id="t-gev-c"></span></div>
+        <div class="tick-item"><span class="tick-name">AMD</span><span class="tick-val" id="t-amd">—</span></div>
+        <div class="tick-item"><span class="tick-name">VRT</span><span class="tick-val" id="t-vrt">—</span></div>
+      </div>
+      <div class="topbar-date" id="t-date"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="wrap">
+    <div class="header-inner">
+      <a href="#" class="logo-wrap" onclick="showView('home')">
+        <div class="logo-name">The <span>$1M</span> Journey</div>
+        <div class="logo-sub">Ash's Transparent Wealth Blog</div>
+      </a>
+      <nav class="site-nav">
+        <a class="nav-a on" href="#" onclick="showView('home')">Home</a>
+        <a class="nav-a" href="#" onclick="showView('trades')">Trade Log</a>
+        <a class="nav-a" href="#" onclick="showView('portfolio')">Portfolio</a>
+        <a class="nav-a" href="#" onclick="showView('watchlist')">Watchlist</a>
+        <a class="nav-a" href="#" onclick="showView('glossary')">Glossary</a>
+        <a class="nav-a" href="#" onclick="showView('about')">About</a>
+      </nav>
+      <div class="hdr-btns">
+        <button class="btn btn-ghost" onclick="showView('trades')">📊 Trades</button>
+        <button class="btn btn-ink" onclick="openCompose()">+ New Post</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ════════════════════════════════════════════
+     HOME VIEW
+════════════════════════════════════════════ -->
+<div id="view-home" class="view on">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-layout">
+        <div>
+          <div class="hero-eye">🇺🇸 Real investor · Real numbers · No BS</div>
+          <h1 class="hero-h1">Building to<br><em>one million</em><br>dollars.</h1>
+          <p class="hero-sub">Every stock I buy. Every position I trim. Every mistake I make — posted here, publicly, with full reasoning. This is the $1M journey.</p>
+          <div class="hero-kpis">
+            <div class="kpi"><div class="kpi-val">2023</div><div class="kpi-label">Started</div></div>
+            <div class="kpi"><div class="kpi-val" id="h-posts">—</div><div class="kpi-label">Posts</div></div>
+            <div class="kpi"><div class="kpi-val">2035</div><div class="kpi-label">Target</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="prog-card">
+            <div class="prog-eyebrow">Progress to $1,000,000</div>
+            <div class="prog-row">
+              <div>
+                <div class="prog-current" id="h-current">$—</div>
+              </div>
+              <div style="text-align:right">
+                <div style="font-size:13px;color:rgba(255,255,255,.4)">Goal</div>
+                <div style="font-family:var(--serif);font-size:1.1rem;font-weight:700">$1,000,000</div>
+              </div>
+            </div>
+            <div class="prog-track"><div class="prog-fill" id="h-bar" style="width:0%"></div></div>
+            <div class="prog-pct" id="h-pct">0% of the way there</div>
+            <div class="milestones">
+              <div class="ms done">$10K</div>
+              <div class="ms done">$50K</div>
+              <div class="ms done">$100K</div>
+              <div class="ms now">$250K</div>
+              <div class="ms">$500K</div>
+              <div class="ms">$1M 🎯</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AdSense: Leaderboard below hero -->
+  <div style="background:var(--card);border-bottom:1px solid var(--border);padding:.85rem 0">
+    <div class="wrap">
+      <!-- REPLACE with: <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXX" data-ad-slot="XXXX" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script> -->
+      <div class="ad-slot" style="height:90px">Advertisement<small>AdSense Leaderboard 728×90</small></div>
+    </div>
+  </div>
+
+  <!-- Page body -->
+  <div class="page-pad">
+    <div class="wrap">
+
+      <!-- Compose panel -->
+      <div class="compose" id="compose">
+        <div class="compose-top">
+          <h3 id="compose-head">New Entry</h3>
+          <button class="compose-x" onclick="closeCompose()">✕</button>
+        </div>
+        <div class="type-row">
+          <button class="tb on" data-t="update" onclick="setType(this,'update')">📈 Portfolio Update</button>
+          <button class="tb" data-t="trade" onclick="setType(this,'trade')">💸 Trade Alert</button>
+          <button class="tb" data-t="milestone" onclick="setType(this,'milestone')">🏆 Milestone</button>
+          <button class="tb" data-t="analysis" onclick="setType(this,'analysis')">📊 Analysis</button>
+          <button class="tb" data-t="reflection" onclick="setType(this,'reflection')">💭 Reflection</button>
+        </div>
+        <div class="compose-body">
+          <div class="field"><label>Title</label><input class="f-title" type="text" id="c-title" placeholder='e.g. "Added to GEV position at $305 — here's why"'></div>
+          <div class="field"><label>Your thoughts</label><textarea id="c-body" placeholder="Write your analysis, trade reasoning, what happened today, lessons learned..."></textarea></div>
+
+          <div class="trade-box" id="trade-box">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-4);margin-bottom:.75rem">Trade Details</div>
+            <div class="cols-3" style="margin-bottom:.75rem">
+              <div class="field" style="margin-bottom:0"><label>Ticker</label><input type="text" id="t-ticker" placeholder="e.g. GEV, AMD"></div>
+              <div class="field" style="margin-bottom:0"><label>Action</label>
+                <select id="t-action"><option value="BUY">BUY</option><option value="SELL">SELL</option><option value="HOLD">HOLD</option><option value="ADD">ADD TO</option><option value="TRIM">TRIM</option></select>
+              </div>
+              <div class="field" style="margin-bottom:0"><label>Exchange</label>
+                <select id="t-exch"><option value="NYSE">NYSE</option><option value="NASDAQ">NASDAQ</option><option value="ETF">ETF</option></select>
+              </div>
+            </div>
+            <div class="cols-3">
+              <div class="field" style="margin-bottom:0"><label>Price ($)</label><input type="number" id="t-price" placeholder="0.00" step="0.01"></div>
+              <div class="field" style="margin-bottom:0"><label>Shares</label><input type="number" id="t-qty" placeholder="0"></div>
+              <div class="field" style="margin-bottom:0"><label>Total ($)</label><input type="number" id="t-total" placeholder="0.00"></div>
+            </div>
+          </div>
+
+          <div class="cols-2">
+            <div class="field" style="margin-bottom:0"><label>Portfolio Value ($)</label><input type="number" id="c-pv" placeholder="e.g. 127500 for $127,500"></div>
+            <div class="field" style="margin-bottom:0"><label>Tags (comma separated)</label><input type="text" id="c-tags" placeholder="e.g. GEV, AI-infrastructure, FIRE"></div>
+          </div>
+        </div>
+        <div class="compose-foot">
+          <p>Entries saved in your browser. Copy content to your CMS when ready.</p>
+          <button class="btn-pub" onclick="publish()">Publish Entry →</button>
+        </div>
+      </div>
+
+      <div class="grid-main">
+        <div>
+          <div id="feat"></div>
+          <div class="sec-head"><h2>Latest Entries</h2><span id="entry-count" style="font-size:13px;color:var(--ink-4)"></span></div>
+          <div class="post-feed" id="feed1"></div>
+
+          <!-- Mid-content AdSense -->
+          <div style="display:flex;justify-content:center;margin:2rem 0">
+            <!-- REPLACE with AdSense rectangle -->
+            <div class="ad-slot" style="width:340px;height:280px">Advertisement<small>AdSense Rectangle 336×280</small></div>
+          </div>
+
+          <!-- Support Banner -->
+          <div style="background:var(--ink);border-radius:var(--rl);padding:2rem;margin-bottom:1.5rem;position:relative;overflow:hidden">
+            <div style="position:absolute;right:-20px;top:-20px;font-size:8rem;opacity:.05;pointer-events:none;line-height:1">☕</div>
+            <div style="display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center">
+              <div>
+                <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.4);margin-bottom:.4rem">Support the $1M journey</div>
+                <div style="font-family:var(--serif);font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:.35rem">Every tip gets invested. Watch it compound.</div>
+                <div style="font-size:13px;color:rgba(255,255,255,.5);line-height:1.6;margin-bottom:1rem">I post a trade entry for every tip received — so you can literally watch your support grow in real time on this blog.</div>
+                <div style="background:rgba(255,255,255,.07);border-radius:var(--r);padding:.75rem 1rem;margin-bottom:.85rem">
+                  <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.4rem">
+                    <span style="font-family:var(--serif);font-size:1.2rem;font-weight:700;color:#fff" id="banner-raised">$0</span>
+                    <span style="font-size:12px;color:rgba(255,255,255,.35)">of $5,000 community goal</span>
+                  </div>
+                  <div style="background:rgba(255,255,255,.12);border-radius:99px;height:5px;overflow:hidden;margin-bottom:.35rem">
+                    <div id="banner-fill" style="height:100%;background:linear-gradient(90deg,#4ade80,#86efac);border-radius:99px;width:0%;transition:width .6s ease"></div>
+                  </div>
+                  <div style="font-size:11px;color:rgba(255,255,255,.35)" id="banner-count">No supporters yet — be the first!</div>
+                </div>
+                <div style="display:flex;gap:8px;flex-wrap:wrap">
+                  <a href="https://paypal.me/YOUR_USERNAME" target="_blank" onclick="trackTip('paypal')" style="background:#0070ba;color:#fff;border-radius:6px;padding:8px 18px;font-size:13px;font-weight:700;display:inline-flex;align-items:center;gap:6px;transition:.15s">PayPal</a>
+                  <a href="https://venmo.com/YOUR_USERNAME" target="_blank" onclick="trackTip('venmo')" style="background:#3d95ce;color:#fff;border-radius:6px;padding:8px 18px;font-size:13px;font-weight:700;transition:.15s">Venmo</a>
+                  <a href="https://cash.app/$YOUR_CASHTAG" target="_blank" onclick="trackTip('cashapp')" style="background:#00d54b;color:#fff;border-radius:6px;padding:8px 18px;font-size:13px;font-weight:700;transition:.15s">Cash App</a>
+                  <a href="https://buymeacoffee.com/YOUR_USERNAME" target="_blank" onclick="trackTip('bmc')" style="background:#ffdd00;color:#0d0d0d;border-radius:6px;padding:8px 18px;font-size:13px;font-weight:700;transition:.15s">☕ Buy Me a Coffee</a>
+                </div>
+              </div>
+              <div style="text-align:center;min-width:90px">
+                <div style="font-family:var(--serif);font-size:3.5rem;font-weight:700;color:rgba(255,255,255,.08);line-height:1">$1M</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="post-feed" id="feed2"></div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="sb">
+          <!-- About -->
+          <div class="sb-card">
+            <div class="sb-head"><h4>The Investor</h4></div>
+            <div class="sb-body">
+              <div class="about-flex">
+                <div class="about-avatar">A</div>
+                <div class="about-info">
+                  <h4>Ash</h4>
+                  <p>Retail investor. $1M goal by 2035. US stocks — heavy on AI infrastructure theme. GEV, AMD, VRT, CAT are my highest conviction picks. Not a financial advisor.</p>
+                </div>
+              </div>
+              <div class="social-btns">
+                <div class="social-btn">𝕏 Twitter</div>
+                <div class="social-btn">📧 Newsletter</div>
+                <div class="social-btn">💬 Discord</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Portfolio stats -->
+          <div class="sb-card">
+            <div class="sb-head"><h4>Portfolio Snapshot</h4></div>
+            <div class="stat-grid">
+              <div class="stat-cell"><div class="stat-val up" id="sb-val">—</div><div class="stat-lbl">Current</div></div>
+              <div class="stat-cell"><div class="stat-val" id="sb-pct">—</div><div class="stat-lbl">To Goal</div></div>
+              <div class="stat-cell"><div class="stat-val">4</div><div class="stat-lbl">Core Picks</div></div>
+              <div class="stat-cell"><div class="stat-val">2035</div><div class="stat-lbl">Target</div></div>
+            </div>
+            <div class="sb-body" style="padding-top:.75rem">
+              <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-4);margin-bottom:.85rem">Allocation</div>
+              <div class="alloc">
+                <div class="alloc-row"><span class="alloc-name">AI Infrastructure</span><span class="alloc-pct" style="color:var(--green-mid)">40%</span></div>
+                <div class="alloc-bar"><div class="alloc-fill" style="width:40%;background:var(--green-mid)"></div></div>
+              </div>
+              <div class="alloc">
+                <div class="alloc-row"><span class="alloc-name">Broad Market ETFs</span><span class="alloc-pct" style="color:var(--blue-mid)">35%</span></div>
+                <div class="alloc-bar"><div class="alloc-fill" style="width:35%;background:var(--blue-mid)"></div></div>
+              </div>
+              <div class="alloc">
+                <div class="alloc-row"><span class="alloc-name">Cash / Dry Powder</span><span class="alloc-pct" style="color:var(--amber-mid)">15%</span></div>
+                <div class="alloc-bar"><div class="alloc-fill" style="width:15%;background:var(--amber-mid)"></div></div>
+              </div>
+              <div class="alloc">
+                <div class="alloc-row"><span class="alloc-name">Other</span><span class="alloc-pct" style="color:var(--ink-4)">10%</span></div>
+                <div class="alloc-bar"><div class="alloc-fill" style="width:10%;background:var(--border)"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AdSense sidebar -->
+          <div>
+            <!-- REPLACE with AdSense -->
+            <div class="ad-slot" style="height:250px">Advertisement<small>AdSense 300×250</small></div>
+          </div>
+
+          <!-- Milestones -->
+          <div class="sb-card">
+            <div class="sb-head"><h4>Milestone Tracker</h4></div>
+            <div class="sb-body">
+              <ul class="ms-list">
+                <li class="ms-item"><div class="ms-dot done"></div><div class="ms-amt">$10,000</div><div class="ms-status ok">✓ Achieved</div></li>
+                <li class="ms-item"><div class="ms-dot done"></div><div class="ms-amt">$50,000</div><div class="ms-status ok">✓ Achieved</div></li>
+                <li class="ms-item"><div class="ms-dot done"></div><div class="ms-amt">$100,000</div><div class="ms-status ok">✓ Achieved</div></li>
+                <li class="ms-item"><div class="ms-dot now"></div><div class="ms-amt">$250,000</div><div class="ms-status active">⏳ In progress</div></li>
+                <li class="ms-item"><div class="ms-dot"></div><div class="ms-amt">$500,000</div><div class="ms-status">Upcoming</div></li>
+                <li class="ms-item"><div class="ms-dot"></div><div class="ms-amt">$1,000,000 🎯</div><div class="ms-status">The goal</div></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Support / Tip card -->
+          <div class="tip-card">
+            <div class="tip-eyebrow">Support the journey</div>
+            <div class="tip-title">Help me reach $1,000,000 faster ☕</div>
+            <div class="tip-sub">Every dollar goes directly into my investment portfolio. Watch it compound in real time.</div>
+
+            <div class="tip-raised">
+              <div class="tip-raised-row">
+                <div class="tip-raised-val" id="tip-raised-val">$0</div>
+                <div class="tip-raised-goal">of $5,000 goal</div>
+              </div>
+              <div class="tip-track"><div class="tip-fill" id="tip-fill" style="width:0%"></div></div>
+              <div class="tip-donors" id="tip-donors">Be the first to support this journey</div>
+            </div>
+
+            <div class="tip-amounts">
+              <button class="tip-amt-btn sel" data-amt="5" onclick="selectAmt(this)">$5</button>
+              <button class="tip-amt-btn" data-amt="10" onclick="selectAmt(this)">$10</button>
+              <button class="tip-amt-btn" data-amt="25" onclick="selectAmt(this)">$25</button>
+              <button class="tip-amt-btn" data-amt="50" onclick="selectAmt(this)">$50</button>
+            </div>
+
+            <div class="tip-custom-row">
+              <input class="tip-custom-input" type="number" id="tip-custom" placeholder="Custom amount ($)" min="1">
+            </div>
+
+            <div class="tip-methods">
+              <a href="https://paypal.me/YOUR_USERNAME" target="_blank" class="tip-btn tip-btn-paypal" onclick="trackTip('paypal')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 0 0-.607-.541c-.013.076-.026.175-.041.254-.59 3.025-2.566 6.082-8.558 6.082H9.833l-1.39 8.813H12.7a.75.75 0 0 0 .74-.634l.03-.17.588-3.73.038-.205a.75.75 0 0 1 .74-.634h.468c3.023 0 5.392-1.23 6.084-4.787.29-1.487.14-2.73-.576-3.448z"/></svg>
+                PayPal
+              </a>
+              <a href="https://venmo.com/YOUR_USERNAME" target="_blank" class="tip-btn tip-btn-venmo" onclick="trackTip('venmo')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M19.17 3c.321.537.465 1.09.465 1.805 0 2.25-1.92 5.18-3.483 7.236H11.41L9.956 3.537l4.743-.465.72 5.752C16.08 7.234 17.1 5.075 17.1 3.465c0-.394-.054-.75-.144-1.07L19.17 3zM3 20.465L5.49 3h4.5l-2.054 17.465H3z"/></svg>
+                Venmo
+              </a>
+              <a href="https://cash.app/$YOUR_CASHTAG" target="_blank" class="tip-btn tip-btn-cashapp" onclick="trackTip('cashapp')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M23.59 3.41A2 2 0 0 0 21.18 2h-8.79a2 2 0 0 0-1.41.59L2 11.56a2 2 0 0 0 0 2.83l7.61 7.61a2 2 0 0 0 2.83 0l8.97-8.97a2 2 0 0 0 .59-1.41V3.41zM13 16a1 1 0 0 1-2 0v-.17a3.09 3.09 0 0 1-1.76-1.07 1 1 0 1 1 1.56-1.25.93.93 0 0 0 .69.34h.76a.47.47 0 0 0 0-.94h-.5A2.47 2.47 0 0 1 9.5 10.5a2.5 2.5 0 0 1 1.5-2.3V8a1 1 0 0 1 2 0v.2a3.08 3.08 0 0 1 1.76 1.07 1 1 0 0 1-1.56 1.25.94.94 0 0 0-.7-.34h-.75a.47.47 0 0 0 0 .94h.5A2.47 2.47 0 0 1 14.5 13.5 2.5 2.5 0 0 1 13 15.8z"/></svg>
+                Cash App
+              </a>
+            </div>
+
+            <button class="tip-toggle" onclick="toggleMoreTip(this)">More options ▾</button>
+            <div class="tip-methods-extra" id="tip-extra">
+              <a href="https://buymeacoffee.com/YOUR_USERNAME" target="_blank" class="tip-btn tip-btn-bmc" onclick="trackTip('bmc')">☕ Buy Me a Coffee</a>
+              <a href="https://ko-fi.com/YOUR_USERNAME" target="_blank" class="tip-btn tip-btn-kofi" onclick="trackTip('kofi')">Ko-fi Support</a>
+            </div>
+
+            <div class="tip-note">100% goes into my brokerage account.<br>I post every tip received as a trade entry. Thank you 🙏</div>
+          </div>
+
+          <!-- Top holdings -->
+          <div class="sb-card">
+            <div class="sb-head"><h4>High Conviction Picks</h4></div>
+            <div class="sb-body" style="padding-top:.5rem">
+              <div class="holding"><div class="h-left"><div class="h-ticker">GEV</div><div class="h-name">GE Vernova</div></div><div class="h-right"><div class="h-pnl up">AI Power</div><div class="h-sub">Highest conv.</div></div></div>
+              <div class="holding"><div class="h-left"><div class="h-ticker">AMD</div><div class="h-name">Advanced Micro Devices</div></div><div class="h-right"><div class="h-pnl up">AI Chips</div><div class="h-sub">High conv.</div></div></div>
+              <div class="holding"><div class="h-left"><div class="h-ticker">VRT</div><div class="h-name">Vertiv Holdings</div></div><div class="h-right"><div class="h-pnl up">Data Centers</div><div class="h-sub">High conv.</div></div></div>
+              <div class="holding"><div class="h-left"><div class="h-ticker">CAT</div><div class="h-name">Caterpillar</div></div><div class="h-right"><div class="h-pnl up">Infra Cycle</div><div class="h-sub">High conv.</div></div></div>
+            </div>
+          </div>
+
+          <div class="disclaimer">
+            <strong>⚠️ Disclaimer</strong>
+            I am not a licensed financial advisor. Nothing on this blog is investment advice. These are my personal trades documented for accountability and education. Always do your own research.
+          </div>
+
+          <!-- Weekly Poll -->
+          <div class="poll-card">
+            <div class="poll-head">
+              <h4>📊 Weekly Poll</h4>
+              <span class="poll-timer" id="poll-timer">Resets Sunday</span>
+            </div>
+            <div class="poll-body">
+              <div class="poll-q" id="poll-question">What should I buy with my next $500?</div>
+              <div class="poll-options" id="poll-options"></div>
+              <div class="poll-meta">
+                <span id="poll-votes">0 votes</span>
+                <span id="poll-closes">Closes Sunday</span>
+              </div>
+              <button class="poll-edit" onclick="togglePollAdmin()">✏ Edit poll (owner)</button>
+            </div>
+            <div class="poll-admin" id="poll-admin">
+              <div class="poll-admin-title">Set new poll</div>
+              <input class="poll-new-q" type="text" id="pa-q" placeholder="Enter your question...">
+              <div class="poll-opts-edit" id="pa-opts">
+                <input class="poll-opt-input" type="text" placeholder="Option 1 e.g. Buy GEV">
+                <input class="poll-opt-input" type="text" placeholder="Option 2 e.g. Buy AMD">
+                <input class="poll-opt-input" type="text" placeholder="Option 3 e.g. Hold cash">
+                <input class="poll-opt-input" type="text" placeholder="Option 4 (optional)">
+              </div>
+              <button class="poll-save-btn" onclick="savePoll()">Save Poll</button>
+            </div>
+          </div>
+
+          <!-- Benchmark Chart -->
+          <div class="bench-card">
+            <div class="bench-head">
+              <h3>My Returns vs S&amp;P 500</h3>
+              <div class="bench-legend">
+                <div class="bl-item"><div class="bl-dot" style="background:#15803d"></div>My Portfolio</div>
+                <div class="bl-item"><div class="bl-dot" style="background:#2563eb"></div>S&amp;P 500</div>
+              </div>
+            </div>
+            <div class="bench-body">
+              <div class="bench-stats">
+                <div class="bstat"><div class="bstat-val up" id="b-mine">—</div><div class="bstat-label">My Return</div></div>
+                <div class="bstat"><div class="bstat-val" id="b-sp" style="color:var(--blue-mid)">—</div><div class="bstat-label">S&amp;P 500</div></div>
+                <div class="bstat"><div class="bstat-val" id="b-alpha">—</div><div class="bstat-label">Alpha</div></div>
+              </div>
+              <div class="bench-chart"><svg class="bench-svg" id="bench-svg" viewBox="0 0 300 140" preserveAspectRatio="none"></svg></div>
+              <div class="bench-months" id="bench-months"></div>
+              <div style="font-size:11px;color:var(--ink-4);margin-top:.5rem;text-align:center">Enter monthly portfolio values in your posts to update chart</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     TRADE LOG VIEW
+════════════════════════════════════════════ -->
+<div id="view-trades" class="view">
+  <div class="page-pad">
+    <div class="wrap">
+      <div class="grid-main">
+        <div>
+          <div class="sec-head">
+            <h2>Full Trade Log</h2>
+            <button class="btn btn-ink" style="font-size:12px;padding:6px 14px" onclick="openCompose();setTypeByName('trade')">+ Log Trade</button>
+          </div>
+
+          <div class="trade-wrap">
+            <div class="trade-head">
+              <h3>All Transactions</h3>
+              <div class="filters">
+                <button class="fb on" onclick="filterTrades('all',this)">All</button>
+                <button class="fb" onclick="filterTrades('BUY',this)">Buy</button>
+                <button class="fb" onclick="filterTrades('SELL',this)">Sell</button>
+                <button class="fb" onclick="filterTrades('ADD',this)">Add</button>
+                <button class="fb" onclick="filterTrades('TRIM',this)">Trim</button>
+              </div>
+            </div>
+            <div class="tbl-scroll">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Date</th><th>Ticker</th><th>Action</th><th>Exchange</th>
+                    <th>Price</th><th>Shares</th><th>Total</th><th>Note</th>
+                  </tr>
+                </thead>
+                <tbody id="trade-body"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div style="display:flex;justify-content:center;margin:1.5rem 0">
+            <div class="ad-slot" style="width:100%;height:90px">AdSense Leaderboard</div>
+          </div>
+        </div>
+        <aside class="sb">
+          <div class="sb-card">
+            <div class="sb-head"><h4>Trade Summary</h4></div>
+            <div class="stat-grid">
+              <div class="stat-cell"><div class="stat-val up" id="tl-buys">—</div><div class="stat-lbl">Buys</div></div>
+              <div class="stat-cell"><div class="stat-val dn" id="tl-sells">—</div><div class="stat-lbl">Sells</div></div>
+              <div class="stat-cell"><div class="stat-val" id="tl-adds">—</div><div class="stat-lbl">Adds</div></div>
+              <div class="stat-cell"><div class="stat-val" id="tl-total">—</div><div class="stat-lbl">Total</div></div>
+            </div>
+          </div>
+          <div class="ad-slot" style="height:250px">AdSense Sidebar</div>
+          <div class="disclaimer"><strong>⚠️ Not Financial Advice</strong>Personal trade log for educational purposes only.</div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     PORTFOLIO VIEW
+════════════════════════════════════════════ -->
+<div id="view-portfolio" class="view">
+  <div class="page-pad">
+    <div class="wrap">
+      <div class="sec-head"><h2>Portfolio Overview</h2><span style="font-size:13px;color:var(--ink-4)">Updated with each post</span></div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-bottom:2rem">
+        <div class="sb-card" style="text-align:center;padding:1.25rem">
+          <div style="font-family:var(--serif);font-size:1.6rem;font-weight:700;color:var(--green-mid)" id="pf-val">—</div>
+          <div style="font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-4);margin-top:4px">Portfolio Value</div>
+        </div>
+        <div class="sb-card" style="text-align:center;padding:1.25rem">
+          <div style="font-family:var(--serif);font-size:1.6rem;font-weight:700" id="pf-pct">—</div>
+          <div style="font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-4);margin-top:4px">% to $1M</div>
+        </div>
+        <div class="sb-card" style="text-align:center;padding:1.25rem">
+          <div style="font-family:var(--serif);font-size:1.6rem;font-weight:700">4</div>
+          <div style="font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-4);margin-top:4px">Core Positions</div>
+        </div>
+        <div class="sb-card" style="text-align:center;padding:1.25rem">
+          <div style="font-family:var(--serif);font-size:1.6rem;font-weight:700">2035</div>
+          <div style="font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-4);margin-top:4px">Target Year</div>
+        </div>
+      </div>
+
+      <div class="sec-head" style="margin-top:2rem"><h2>High Conviction Positions</h2></div>
+      <div class="convictions">
+        <div class="conv-head"><span>Ticker</span><span>Thesis</span><span>Theme</span><span>Conviction</span><span>Status</span></div>
+        <div class="conv-row">
+          <div class="conv-ticker">GEV</div>
+          <div class="conv-thesis">GE Vernova — grid modernization & power infrastructure for AI data centers. Massive capex cycle incoming as data centers demand 3× more electricity by 2030.</div>
+          <div class="conv-theme"><span class="tag tag-analysis">AI Power</span></div>
+          <div class="conv-conf up">★★★★★</div>
+          <div><span class="tag tag-buy">Core Hold</span></div>
+        </div>
+        <div class="conv-row">
+          <div class="conv-ticker">AMD</div>
+          <div class="conv-thesis">AI GPU competition to NVIDIA. Data center GPU market growing fast. AMD MI300X competitive. Strong management under Lisa Su.</div>
+          <div class="conv-theme"><span class="tag tag-analysis">AI Chips</span></div>
+          <div class="conv-conf up">★★★★☆</div>
+          <div><span class="tag tag-buy">Core Hold</span></div>
+        </div>
+        <div class="conv-row">
+          <div class="conv-ticker">VRT</div>
+          <div class="conv-thesis">Vertiv — thermal management and power distribution for data centers. Every AI chip needs cooling. The picks and shovels of the AI build-out.</div>
+          <div class="conv-theme"><span class="tag tag-analysis">Data Centers</span></div>
+          <div class="conv-conf up">★★★★☆</div>
+          <div><span class="tag tag-buy">Core Hold</span></div>
+        </div>
+        <div class="conv-row">
+          <div class="conv-ticker">CAT</div>
+          <div class="conv-thesis">Caterpillar — construction and infrastructure mega-cycle. Data centers, power plants, grid upgrades all need heavy equipment. Long tail beneficiary.</div>
+          <div class="conv-theme"><span class="tag tag-analysis">Infrastructure</span></div>
+          <div class="conv-conf up">★★★☆☆</div>
+          <div><span class="tag tag-hold">Watching</span></div>
+        </div>
+      </div>
+
+      <div style="display:flex;justify-content:center;margin:2rem 0">
+        <div class="ad-slot" style="width:100%;height:90px">AdSense Leaderboard</div>
+      </div>
+
+      <div class="disclaimer"><strong>⚠️ Disclaimer</strong>Not a licensed financial advisor. These positions are my personal investments documented for transparency. Not financial advice. All investments carry risk of loss.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     ABOUT VIEW
+════════════════════════════════════════════ -->
+<div id="view-about" class="view">
+  <div class="page-pad">
+    <div class="wrap" style="max-width:700px">
+      <h1 style="font-size:2.2rem;margin-bottom:1.5rem">About This Blog</h1>
+      <div class="sb-card">
+        <div style="padding:2rem">
+          <p style="font-family:var(--serif);font-size:1.1rem;line-height:1.85;color:var(--ink-2);margin-bottom:1.25rem">I'm Ash. I started this blog because most finance content is either generic advice or flexing highlight reels. I wanted something different — a raw, unfiltered account of what it actually looks like to build wealth as a regular person.</p>
+          <p style="font-size:15px;color:var(--ink-2);line-height:1.75;margin-bottom:1.25rem">The goal is $1,000,000. I invest in US stocks with a heavy thesis on AI infrastructure — the companies building the physical backbone of the AI economy. GEV, AMD, VRT, and CAT are my highest conviction plays.</p>
+          <p style="font-size:15px;color:var(--ink-2);line-height:1.75;margin-bottom:1.75rem">Every trade I make gets logged here. Every monthly update. Every time I'm wrong. The transparency is the whole point.</p>
+          <div class="disclaimer"><strong>⚠️ Important Disclaimer</strong>I am not a licensed financial advisor or registered investment advisor. This blog documents my personal investment decisions for educational and entertainment purposes only. Nothing I write constitutes financial advice or a recommendation to buy or sell any security. All investments carry risk, including the possible loss of principal. Always consult a qualified financial professional before making investment decisions.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     WATCHLIST VIEW
+════════════════════════════════════════════ -->
+<div id="view-watchlist" class="view">
+  <div class="page-pad">
+    <div class="wrap">
+      <div class="grid-main">
+        <div>
+          <div class="sec-head">
+            <h2>Stock Watchlist</h2>
+            <button class="watch-add-btn" onclick="toggleWatchForm()">+ Add Stock</button>
+          </div>
+          <p style="font-size:14px;color:var(--ink-3);margin-bottom:1.5rem;line-height:1.7">These are stocks I'm actively researching or waiting on a better entry point. Not positions I currently hold — just names on my radar with my thesis for each.</p>
+
+          <div class="watch-card">
+            <div class="watch-head">
+              <h3>On My Radar</h3>
+              <span style="font-size:12px;color:var(--ink-4)" id="watch-count">— stocks</span>
+            </div>
+            <div id="watch-list"></div>
+            <div class="watch-form" id="watch-form">
+              <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-4);margin-bottom:.75rem">Add to watchlist</div>
+              <div class="wf-grid">
+                <div><input class="wf-input" type="text" id="wf-ticker" placeholder="Ticker (e.g. NVDA)"></div>
+                <div><input class="wf-input" type="text" id="wf-name" placeholder="Company name"></div>
+                <div><input class="wf-input wf-full" type="text" id="wf-thesis" placeholder="Your thesis — why are you watching this?"></div>
+                <div>
+                  <select class="wf-input" id="wf-alert">
+                    <option value="watching">Watching</option>
+                    <option value="below">Buy below price</option>
+                    <option value="above">Sell above price</option>
+                  </select>
+                </div>
+                <div><input class="wf-input" type="number" id="wf-price" placeholder="Alert price ($)"></div>
+                <div><input class="wf-input wf-full" type="text" id="wf-tags" placeholder="Tags e.g. AI, semiconductor, growth"></div>
+              </div>
+              <button class="wf-save" onclick="addWatchItem()">Add to Watchlist</button>
+              <button class="wf-cancel" onclick="toggleWatchForm()">Cancel</button>
+            </div>
+          </div>
+
+          <div style="display:flex;justify-content:center;margin:2rem 0">
+            <div class="ad-slot" style="width:100%;height:90px">AdSense Leaderboard</div>
+          </div>
+        </div>
+        <aside class="sb">
+          <div class="sb-card">
+            <div class="sb-head"><h4>Watchlist Stats</h4></div>
+            <div class="stat-grid">
+              <div class="stat-cell"><div class="stat-val" id="wl-total">—</div><div class="stat-lbl">Watching</div></div>
+              <div class="stat-cell"><div class="stat-val up" id="wl-buy">—</div><div class="stat-lbl">Buy Alerts</div></div>
+              <div class="stat-cell"><div class="stat-val dn" id="wl-sell">—</div><div class="stat-lbl">Sell Alerts</div></div>
+              <div class="stat-cell"><div class="stat-val" id="wl-watch">—</div><div class="stat-lbl">Monitoring</div></div>
+            </div>
+          </div>
+          <div class="disclaimer"><strong>⚠️ Not recommendations</strong>Watchlist stocks are under research only. Not buy/sell advice.</div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     GLOSSARY VIEW
+════════════════════════════════════════════ -->
+<div id="view-glossary" class="view">
+  <div class="page-pad">
+    <div class="wrap">
+      <div style="max-width:760px;margin:0 auto">
+        <div class="sec-head" style="margin-bottom:.75rem"><h2>Investor Glossary</h2></div>
+        <p style="font-size:14px;color:var(--ink-3);margin-bottom:1.5rem;line-height:1.7">Plain-English definitions of every term I use on this blog. Bookmarked for new investors who are just getting started.</p>
+
+        <input class="gloss-search" type="text" id="gloss-search" placeholder="Search terms e.g. CAGR, drawdown, P/E ratio..." oninput="filterGlossary()">
+
+        <div class="gloss-alpha" id="gloss-alpha"></div>
+
+        <div id="gloss-content"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <span class="logo-name">The $1M Journey</span>
+        <p>A transparent, daily-updated blog tracking one retail investor's path to $1,000,000. US stocks, AI infrastructure, honest numbers.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="#" onclick="showView('home')">Home</a></li>
+          <li><a href="#" onclick="showView('trades')">Trade Log</a></li>
+          <li><a href="#" onclick="showView('portfolio')">Portfolio</a></li>
+          <li><a href="#" onclick="showView('about')">About</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Topics</h5>
+        <ul>
+          <li><a href="#">AI Infrastructure</a></li>
+          <li><a href="#">Stock Analysis</a></li>
+          <li><a href="#">FIRE Investing</a></li>
+          <li><a href="#">Portfolio Updates</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2025 The $1M Journey — Ash</span>
+      <span>Built in public 🇺🇸</span>
+    </div>
+    <p class="foot-legal">Disclaimer: Not a licensed financial advisor. Not investment advice. All investments carry risk of loss. For educational purposes only. Past performance does not guarantee future results.</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ── Storage keys ─────────────────────── */
+const SK_POSTS  = 'tmj_posts_v1';
+const SK_TRADES = 'tmj_trades_v1';
+const GOAL = 1000000;
+
+const loadPosts  = () => { try { return JSON.parse(localStorage.getItem(SK_POSTS)) || []; } catch { return []; } };
+const savePosts  = d => { try { localStorage.setItem(SK_POSTS, JSON.stringify(d)); } catch {} };
+const loadTrades = () => { try { return JSON.parse(localStorage.getItem(SK_TRADES)) || []; } catch { return []; } };
+const saveTrades = d => { try { localStorage.setItem(SK_TRADES, JSON.stringify(d)); } catch {} };
+
+/* ── Seed data ────────────────────────── */
+function seed() {
+  if (loadPosts().length) return;
+
+  savePosts([
+    {id:1,type:'reflection',date:'Jan 14, 2025',
+     title:'Why I\'m documenting every dollar of this journey publicly',
+     body:'Most wealth-building content is either vague inspiration or cherry-picked wins. I wanted to do something different — log every trade, every mistake, every monthly update in public. The accountability is the point. The $1M goal is real. The timeline is aggressive. Let\'s see if it works.',
+     pv:null,tags:['intro','transparency','FIRE'],reactions:{fire:11,up:19,heart:8}},
+    {id:2,type:'milestone',date:'Feb 3, 2025',
+     title:'Portfolio crossed $100,000 — the first real milestone',
+     body:'Hit six figures for the first time. Feels significant, even though the math says $1M is still a long way out. Biggest drivers: GEV up 34% since initial position, AMD recovery, and consistent monthly contributions. The AI power infrastructure thesis is holding up exactly as I expected.',
+     pv:103200,tags:['milestone','100K','GEV','AMD'],reactions:{fire:28,up:44,heart:21}},
+    {id:3,type:'analysis',date:'Mar 18, 2025',
+     title:'Why I\'m betting on AI power infrastructure — the GEV, VRT, CAT thesis',
+     body:'Data centers need 3× more electricity by 2030. AI training clusters run 24/7 at near-100% utilization. The bottleneck isn\'t chips anymore — it\'s power and cooling. GEV is the grid. VRT is the thermal management. CAT is the construction. These are the picks and shovels of the AI mega-cycle.',
+     pv:null,tags:['GEV','VRT','CAT','analysis','AI'],reactions:{fire:34,up:52,heart:18}},
+    {id:4,type:'trade',date:'Apr 22, 2025',
+     title:'Added to GEV at $305 — trimmed CAT at $370',
+     body:'GEV pulled back 12% on broader market weakness — added 8 more shares at $305. This is exactly the kind of entry I\'ve been waiting for. Trimmed CAT at $370 (still holding half the position) to free up cash. CAT is more of an infrastructure macro play vs GEV which is pure AI power. Rotating conviction.',
+     pv:118500,tags:['GEV','CAT','trade','rebalance'],reactions:{fire:16,up:27,heart:9}},
+    {id:5,type:'update',date:'May 30, 2025',
+     title:'May 2025 monthly update — $127K, AMD ripping',
+     body:'Portfolio at $127K at month end. AMD had a monster month — up 22% after strong data center guidance. GEV flat. VRT up 8%. Added $3,500 in fresh capital. Still on track for the $250K milestone this year if the AI thesis keeps playing out. Biggest risk: valuation stretch across the board.',
+     pv:127400,tags:['monthly-update','AMD','May2025'],reactions:{fire:19,up:33,heart:12}},
+  ]);
+
+  saveTrades([
+    {id:1,date:'May 30, 2025',ticker:'AMD',action:'ADD',exchange:'NASDAQ',price:158.40,qty:20,total:3168,note:'Monthly add — strong data center guidance'},
+    {id:2,date:'Apr 22, 2025',ticker:'CAT',action:'TRIM',exchange:'NYSE',price:370.20,qty:5,total:1851,note:'Freeing up cash to add GEV'},
+    {id:3,date:'Apr 22, 2025',ticker:'GEV',action:'ADD',exchange:'NYSE',price:305.00,qty:8,total:2440,note:'12% pullback — great entry opportunity'},
+    {id:4,date:'Mar 5, 2025',ticker:'VRT',action:'BUY',exchange:'NYSE',price:112.50,qty:25,total:2812.50,note:'Initial position — data center cooling thesis'},
+    {id:5,date:'Jan 20, 2025',ticker:'GEV',action:'BUY',exchange:'NYSE',price:228.00,qty:20,total:4560,note:'Initial position — AI power infrastructure'},
+    {id:6,date:'Jan 20, 2025',ticker:'AMD',action:'BUY',exchange:'NASDAQ',price:132.00,qty:30,total:3960,note:'Initial position — AI GPU play'},
+  ]);
+}
+
+/* ── Helpers ──────────────────────────── */
+const TYPE_LABELS = {update:'📈 Update',trade:'💸 Trade',milestone:'🏆 Milestone',analysis:'📊 Analysis',reflection:'💭 Reflection'};
+const TYPE_TAGS   = {update:'tag-update',trade:'tag-trade',milestone:'tag-milestone',analysis:'tag-analysis',reflection:'tag-reflection'};
+const ACTION_TAG  = {BUY:'tag-buy',SELL:'tag-sell',HOLD:'tag-hold',ADD:'tag-buy',TRIM:'tag-sell'};
+
+const fmtUSD = n => n != null ? '$' + Number(n).toLocaleString('en-US', {minimumFractionDigits:0,maximumFractionDigits:0}) : '—';
+const fmtPrice = n => n != null ? '$' + Number(n).toFixed(2) : '—';
+const dateStr = () => new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+
+/* ── Views ────────────────────────────── */
+function showView(name) {
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('on'));
+  document.getElementById('view-' + name).classList.add('on');
+  document.querySelectorAll('.nav-a').forEach(a => {
+    a.classList.toggle('on', a.getAttribute('onclick')?.includes("'" + name + "'"));
+  });
+  window.scrollTo(0, 0);
+  if (name === 'trades')    renderTradeTable('all');
+  if (name === 'portfolio') updatePortfolioView();
+}
+
+/* ── Compose ──────────────────────────── */
+let curType = 'update';
+function openCompose() {
+  const el = document.getElementById('compose');
+  el.classList.add('open');
+  el.scrollIntoView({behavior:'smooth', block:'start'});
+}
+function closeCompose() { document.getElementById('compose').classList.remove('open'); }
+
+function setType(btn, type) {
+  document.querySelectorAll('.tb').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  curType = type;
+  document.getElementById('trade-box').classList.toggle('open', type === 'trade');
+  const headings = {update:'New Portfolio Update',trade:'Log a Trade',milestone:'New Milestone',analysis:'New Analysis',reflection:'New Reflection'};
+  document.getElementById('compose-head').textContent = headings[type] || 'New Entry';
+}
+function setTypeByName(t) {
+  const btn = document.querySelector(`[data-t="${t}"]`);
+  if (btn) setType(btn, t);
+}
+
+function publish() {
+  const title = document.getElementById('c-title').value.trim();
+  const body  = document.getElementById('c-body').value.trim();
+  if (!title) { showToast('Please add a title'); return; }
+
+  const pv   = parseFloat(document.getElementById('c-pv').value) || null;
+  const tags = document.getElementById('c-tags').value.split(',').map(t=>t.trim()).filter(Boolean);
+  const posts = loadPosts();
+
+  posts.push({id:Date.now(), type:curType, date:dateStr(), title, body:body||'No content.', pv, tags, reactions:{fire:0,up:0,heart:0}});
+  savePosts(posts);
+
+  if (curType === 'trade') {
+    const ticker = document.getElementById('t-ticker').value.trim();
+    if (ticker) {
+      const trades = loadTrades();
+      trades.push({
+        id:Date.now()+1, date:dateStr(), ticker,
+        action: document.getElementById('t-action').value,
+        exchange: document.getElementById('t-exch').value,
+        price: parseFloat(document.getElementById('t-price').value) || null,
+        qty:   parseFloat(document.getElementById('t-qty').value) || null,
+        total: parseFloat(document.getElementById('t-total').value) || null,
+        note:  body.substring(0,100)
+      });
+      saveTrades(trades);
+    }
+  }
+
+  ['c-title','c-body','c-pv','c-tags','t-ticker','t-price','t-qty','t-total'].forEach(id => {
+    document.getElementById(id).value = '';
+  });
+  closeCompose();
+  renderFeed();
+  updateProgress();
+  showToast('✓ Entry published!');
+}
+
+/* ── Reactions ────────────────────────── */
+function react(id, type) {
+  const posts = loadPosts();
+  const p = posts.find(x => x.id === id);
+  if (p) { p.reactions[type]++; savePosts(posts); renderFeed(); }
+}
+
+/* ── Render feed ──────────────────────── */
+function renderFeed() {
+  const posts = [...loadPosts()].reverse();
+  document.getElementById('h-posts').textContent = posts.length;
+  document.getElementById('entry-count').textContent = posts.length + ' entries';
+
+  // Featured
+  const featEl = document.getElementById('feat');
+  if (posts.length) {
+    const p = posts[0];
+    featEl.innerHTML = `
+    <div class="post-hero">
+      <div class="ph-visual">
+        <div class="ph-visual-bg">${getIcon(p.type)}</div>
+        <div class="ph-icon">${getIcon(p.type)}</div>
+      </div>
+      <div class="ph-body">
+        <div class="ph-meta">
+          <span class="tag ${TYPE_TAGS[p.type]||'tag-update'}">${TYPE_LABELS[p.type]||p.type}</span>
+          <span class="post-date">${p.date}</span>
+          ${p.pv ? `<span class="ph-pv">${fmtUSD(p.pv)}</span>` : ''}
+        </div>
+        <div class="ph-title">${p.title}</div>
+        <p class="ph-excerpt">${p.body.substring(0,220)}${p.body.length>220?'…':''}</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem">
+          <div class="reactions">
+            <button class="rx" onclick="react(${p.id},'fire')">🔥 ${p.reactions.fire}</button>
+            <button class="rx" onclick="react(${p.id},'up')">👍 ${p.reactions.up}</button>
+            <button class="rx" onclick="react(${p.id},'heart')">❤️ ${p.reactions.heart}</button>
+          </div>
+          <span class="pc-tags">${(p.tags||[]).map(t=>'#'+t).join(' ')}</span>
+        </div>
+      </div>
+    </div>`;
+  } else { featEl.innerHTML = ''; }
+
+  const rest = posts.slice(1);
+  document.getElementById('feed1').innerHTML = rest.slice(0,3).map(postCard).join('') ||
+    '<div style="text-align:center;padding:3rem;color:var(--ink-4);font-style:italic;font-size:14px">No entries yet — click "+ New Post" to start your $1M journey</div>';
+  document.getElementById('feed2').innerHTML = rest.slice(3).map(postCard).join('');
+}
+
+function postCard(p) {
+  return `<div class="post-card">
+    <div class="pc-meta">
+      <span class="tag ${TYPE_TAGS[p.type]||'tag-update'}">${TYPE_LABELS[p.type]||p.type}</span>
+      <span class="post-date">${p.date}</span>
+      ${p.pv ? `<span class="mono" style="font-size:12px;font-weight:600;color:var(--green-mid)">${fmtUSD(p.pv)}</span>` : ''}
+    </div>
+    <div class="pc-title">${p.title}</div>
+    <p class="pc-body">${p.body.substring(0,160)}${p.body.length>160?'…':''}</p>
+    <div class="pc-foot">
+      <div class="reactions">
+        <button class="rx" onclick="react(${p.id},'fire')">🔥 ${p.reactions.fire}</button>
+        <button class="rx" onclick="react(${p.id},'up')">👍 ${p.reactions.up}</button>
+        <button class="rx" onclick="react(${p.id},'heart')">❤️ ${p.reactions.heart}</button>
+      </div>
+      <span class="pc-tags">${(p.tags||[]).map(t=>'#'+t).join(' ')}</span>
+    </div>
+  </div>`;
+}
+
+function getIcon(t) {
+  return {update:'📈',trade:'💸',milestone:'🏆',analysis:'📊',reflection:'💭'}[t]||'📝';
+}
+
+/* ── Trade table ──────────────────────── */
+function filterTrades(f, btn) {
+  document.querySelectorAll('.fb').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  renderTradeTable(f);
+}
+function renderTradeTable(f) {
+  const trades = [...loadTrades()].reverse();
+  const rows = f === 'all' ? trades : trades.filter(t => t.action === f);
+
+  document.getElementById('trade-body').innerHTML = rows.length
+    ? rows.map(t => `<tr>
+        <td>${t.date}</td>
+        <td class="td-ticker">${t.ticker}</td>
+        <td><span class="tag ${ACTION_TAG[t.action]||'tag-hold'}">${t.action}</span></td>
+        <td style="font-size:12px;color:var(--ink-4)">${t.exchange||'—'}</td>
+        <td class="td-price">${fmtPrice(t.price)}</td>
+        <td class="td-price">${t.qty||'—'}</td>
+        <td class="td-price">${t.total ? '$'+Number(t.total).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}) : '—'}</td>
+        <td class="td-note">${t.note||''}</td>
+      </tr>`).join('')
+    : `<tr><td colspan="8" class="no-rows">No trades logged yet</td></tr>`;
+
+  const buys  = trades.filter(t => t.action==='BUY').length;
+  const sells = trades.filter(t => t.action==='SELL').length;
+  const adds  = trades.filter(t => t.action==='ADD'||t.action==='TRIM').length;
+  document.getElementById('tl-buys').textContent  = buys;
+  document.getElementById('tl-sells').textContent = sells;
+  document.getElementById('tl-adds').textContent  = adds;
+  document.getElementById('tl-total').textContent = trades.length;
+}
+
+/* ── Progress ─────────────────────────── */
+function updateProgress() {
+  const posts = loadPosts();
+  const pvs = posts.filter(p => p.pv).map(p => p.pv);
+  const latest = pvs.length ? Math.max(...pvs) : 0;
+  const pct = Math.min(100, (latest / GOAL) * 100);
+
+  document.getElementById('h-bar').style.width = pct + '%';
+  document.getElementById('h-current').textContent = latest ? fmtUSD(latest) : '$—';
+  document.getElementById('h-pct').textContent = pct.toFixed(1) + '% of the way there';
+  document.getElementById('sb-val').textContent = latest ? fmtUSD(latest) : '—';
+  document.getElementById('sb-pct').textContent = pct.toFixed(1) + '%';
+}
+
+function updatePortfolioView() {
+  const posts = loadPosts();
+  const pvs = posts.filter(p => p.pv).map(p => p.pv);
+  const latest = pvs.length ? Math.max(...pvs) : 0;
+  const pct = Math.min(100,(latest/GOAL)*100);
+  document.getElementById('pf-val').textContent = latest ? fmtUSD(latest) : '—';
+  document.getElementById('pf-pct').textContent = pct.toFixed(1) + '%';
+}
+
+/* ── Ticker bar (static/demo) ─────────── */
+function initTicker() {
+  const now = new Date();
+  document.getElementById('t-date').textContent =
+    now.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric',year:'numeric'});
+  // Static display values — update manually or wire up a real API
+  const tickers = [
+    ['t-sp','5,277','t-sp-c','+0.4%','up'],
+    ['t-nq','18,432','t-nq-c','+0.6%','up'],
+    ['t-gev','312.40','t-gev-c','+1.2%','up'],
+    ['t-amd','161.80',null,null,null],
+    ['t-vrt','118.90',null,null,null],
+  ];
+  tickers.forEach(([vid,val,cid,chg,dir]) => {
+    const el = document.getElementById(vid);
+    if (el) el.textContent = val;
+    if (cid) {
+      const cel = document.getElementById(cid);
+      if (cel) { cel.textContent = chg; cel.className = 'tick-chg ' + (dir==='up'?'up':'dn'); }
+    }
+  });
+}
+
+/* ── Toast ────────────────────────────── */
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2500);
+}
+
+/* ── Tips / Support ───────────────────── */
+const SK_TIPS = 'tmj_tips_v1';
+const TIP_GOAL = 5000;
+
+function loadTips() { try { return JSON.parse(localStorage.getItem(SK_TIPS)) || {total:0,count:0,log:[]}; } catch { return {total:0,count:0,log:[]}; } }
+function saveTips(d) { try { localStorage.setItem(SK_TIPS, JSON.stringify(d)); } catch {} }
+
+function selectAmt(btn) {
+  document.querySelectorAll('.tip-amt-btn').forEach(b => b.classList.remove('sel'));
+  btn.classList.add('sel');
+  document.getElementById('tip-custom').value = '';
+}
+
+function toggleMoreTip(btn) {
+  const el = document.getElementById('tip-extra');
+  el.classList.toggle('open');
+  btn.textContent = el.classList.contains('open') ? 'Less options ▲' : 'More options ▾';
+}
+
+function trackTip(method) {
+  const selBtn = document.querySelector('.tip-amt-btn.sel');
+  const customVal = parseFloat(document.getElementById('tip-custom').value);
+  const amt = customVal > 0 ? customVal : (selBtn ? parseFloat(selBtn.dataset.amt) : 5);
+  const tips = loadTips();
+  tips.total += amt;
+  tips.count += 1;
+  tips.log.push({amt, method, date: dateStr()});
+  saveTips(tips);
+  updateTipUI();
+  showToast(`💚 Thank you! $${amt} tip via ${method} noted!`);
+}
+
+function updateTipUI() {
+  const tips = loadTips();
+  const pct = Math.min(100, (tips.total / TIP_GOAL) * 100);
+  const el1 = document.getElementById('tip-raised-val');
+  const el2 = document.getElementById('tip-fill');
+  const el3 = document.getElementById('tip-donors');
+  if (el1) el1.textContent = '$' + tips.total.toLocaleString('en-US');
+  if (el2) el2.style.width = pct + '%';
+  if (el3) el3.textContent = tips.count === 0 ? 'Be the first to support this journey' : `${tips.count} supporter${tips.count>1?'s':''} · $${tips.total.toLocaleString()} raised`;
+  // Update banner too
+  const b1 = document.getElementById('banner-raised');
+  const b2 = document.getElementById('banner-fill');
+  const b3 = document.getElementById('banner-count');
+  if (b1) b1.textContent = '$' + tips.total.toLocaleString('en-US');
+  if (b2) b2.style.width = pct + '%';
+  if (b3) b3.textContent = tips.count === 0 ? 'No supporters yet — be the first!' : `${tips.count} supporter${tips.count>1?'s':''} so far`;
+}
+
+/* ══════════════════════════════════════
+   VISITOR COUNTER
+══════════════════════════════════════ */
+const SK_VIS = 'tmj_visitors_v1';
+function initVisitors() {
+  let v = JSON.parse(localStorage.getItem(SK_VIS) || 'null') || {total:0,today:0,lastDate:''};
+  const today = new Date().toDateString();
+  if (v.lastDate !== today) { v.today = 0; v.lastDate = today; }
+  v.total += 1; v.today += 1;
+  localStorage.setItem(SK_VIS, JSON.stringify(v));
+  // Simulate "live" readers with a small random number
+  const live = Math.floor(Math.random() * 7) + 1;
+  document.getElementById('vis-live').textContent  = live;
+  document.getElementById('vis-today').textContent = v.today.toLocaleString();
+  document.getElementById('vis-total').textContent = (v.total + 1247).toLocaleString(); // seed offset
+}
+
+/* ══════════════════════════════════════
+   WEEKLY POLL
+══════════════════════════════════════ */
+const SK_POLL = 'tmj_poll_v1';
+const DEFAULT_POLL = {
+  question: 'What should I buy with my next $500?',
+  options: ['Buy GEV 📈','Buy AMD 💻','Buy VRT ❄️','Hold cash 💵'],
+  votes: [0,0,0,0],
+  voted: false,
+  votedIndex: -1,
+  week: ''
+};
+
+function loadPoll() { try { return {...DEFAULT_POLL, ...JSON.parse(localStorage.getItem(SK_POLL))}; } catch { return {...DEFAULT_POLL}; } }
+function savePollData(d) { try { localStorage.setItem(SK_POLL, JSON.stringify(d)); } catch {} }
+
+function renderPoll() {
+  const p = loadPoll();
+  document.getElementById('poll-question').textContent = p.question;
+  const total = p.votes.reduce((a,b) => a+b, 0);
+  const container = document.getElementById('poll-options');
+  container.innerHTML = p.options.map((opt, i) => {
+    const pct = total > 0 ? Math.round((p.votes[i]/total)*100) : 0;
+    const isWinner = p.voted && p.votes[i] === Math.max(...p.votes);
+    return `<div class="poll-opt${p.voted?' voted':''}${isWinner?' winner':''}" onclick="castVote(${i})">
+      <div class="poll-fill" style="width:${p.voted ? pct : 0}%"></div>
+      <div class="poll-opt-inner">
+        <span class="poll-opt-label">${p.voted && p.votedIndex===i ? '✓ ' : ''}${opt}</span>
+        <span class="poll-opt-pct">${pct}%</span>
+      </div>
+    </div>`;
+  }).join('');
+  document.getElementById('poll-votes').textContent = total + ' vote' + (total !== 1 ? 's' : '');
+
+  // Timer
+  const now = new Date();
+  const sunday = new Date(now); sunday.setDate(now.getDate() + (7 - now.getDay()) % 7 || 7);
+  const diff = sunday - now; const days = Math.floor(diff/86400000); const hrs = Math.floor((diff%86400000)/3600000);
+  document.getElementById('poll-timer').textContent = `Resets in ${days}d ${hrs}h`;
+  const closes = sunday.toLocaleDateString('en-US',{month:'short',day:'numeric'});
+  document.getElementById('poll-closes').textContent = `Closes ${closes}`;
+}
+
+function castVote(i) {
+  const p = loadPoll();
+  if (p.voted) return;
+  p.votes[i] = (p.votes[i]||0) + 1;
+  p.voted = true; p.votedIndex = i;
+  savePollData(p);
+  renderPoll();
+  showToast('✓ Vote cast! Results updated.');
+}
+
+function togglePollAdmin() {
+  document.getElementById('poll-admin').classList.toggle('open');
+}
+
+function savePoll() {
+  const q = document.getElementById('pa-q').value.trim();
+  const inputs = document.querySelectorAll('#pa-opts .poll-opt-input');
+  const opts = [...inputs].map(i => i.value.trim()).filter(Boolean);
+  if (!q || opts.length < 2) { showToast('Need a question and at least 2 options'); return; }
+  const p = {...DEFAULT_POLL, question:q, options:opts, votes:opts.map(()=>0)};
+  savePollData(p);
+  document.getElementById('poll-admin').classList.remove('open');
+  renderPoll();
+  showToast('✓ New poll saved!');
+}
+
+/* ══════════════════════════════════════
+   BENCHMARK CHART
+══════════════════════════════════════ */
+function renderBenchmark() {
+  const posts = loadPosts().filter(p => p.pv).sort((a,b) => new Date(a.date)-new Date(b.date));
+  // S&P 500 approximate monthly returns 2025 (illustrative)
+  const spData = [0, 2.1, 4.8, 3.2, 6.1, 4.5, 7.2, 5.8, 9.1, 7.4, 11.2, 8.9];
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+  if (posts.length < 2) {
+    document.getElementById('bench-svg').innerHTML = `<text x="150" y="75" text-anchor="middle" class="bench-axis" style="font-size:12px">Add portfolio values to your posts to see the chart</text>`;
+    document.getElementById('b-mine').textContent = '—';
+    document.getElementById('b-sp').textContent = '+10.8%';
+    document.getElementById('b-alpha').textContent = '—';
+    document.getElementById('bench-months').innerHTML = months.slice(0,6).map(m=>`<span>${m}</span>`).join('');
+    return;
+  }
+
+  const startPV = posts[0].pv;
+  const myData = posts.slice(0, Math.min(posts.length, 12)).map(p => ((p.pv - startPV)/startPV)*100);
+  const n = myData.length;
+  const spSlice = spData.slice(0, n);
+  const myReturn = myData[myData.length-1];
+  const spReturn = spSlice[spSlice.length-1];
+  const alpha = myReturn - spReturn;
+
+  document.getElementById('b-mine').textContent = (myReturn>=0?'+':'') + myReturn.toFixed(1)+'%';
+  document.getElementById('b-mine').className = 'bstat-val ' + (myReturn >= 0 ? 'up' : 'dn');
+  document.getElementById('b-sp').textContent = (spReturn>=0?'+':'') + spReturn.toFixed(1)+'%';
+  document.getElementById('b-alpha').textContent = (alpha>=0?'+':'') + alpha.toFixed(1)+'%';
+  document.getElementById('b-alpha').className = 'bstat-val ' + (alpha >= 0 ? 'up' : 'dn');
+
+  // SVG chart
+  const W=300, H=130, PAD=24, iW=W-PAD*2, iH=H-PAD*2;
+  const allVals = [...myData, ...spSlice];
+  const minV = Math.min(0, ...allVals)-2, maxV = Math.max(...allVals)+2;
+  const range = maxV - minV || 1;
+  const xStep = iW/(n-1||1);
+  const toX = i => PAD + i*xStep;
+  const toY = v => PAD + iH - ((v-minV)/range)*iH;
+
+  const myPath  = myData.map((v,i) => (i===0?'M':'L')+toX(i).toFixed(1)+','+toY(v).toFixed(1)).join(' ');
+  const spPath  = spSlice.map((v,i) => (i===0?'M':'L')+toX(i).toFixed(1)+','+toY(v).toFixed(1)).join(' ');
+  const zeroY   = toY(0).toFixed(1);
+  const myFill  = myData.map((v,i)=>(i===0?'M':'L')+toX(i).toFixed(1)+','+toY(v).toFixed(1)).join(' ')
+                 +` L${toX(n-1).toFixed(1)},${zeroY} L${PAD},${zeroY} Z`;
+
+  document.getElementById('bench-svg').innerHTML = `
+    <defs>
+      <linearGradient id="gfill" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#15803d" stop-opacity=".18"/>
+        <stop offset="100%" stop-color="#15803d" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <line x1="${PAD}" y1="${zeroY}" x2="${W-PAD}" y2="${zeroY}" stroke="#e2ddd4" stroke-width="1"/>
+    <path d="${myFill}" fill="url(#gfill)"/>
+    <path d="${spPath}"  fill="none" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <path d="${myPath}" fill="none" stroke="#15803d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="${PAD}" y="${H-4}" class="bench-axis">0%</text>
+    <text x="${W-PAD+2}" y="${toY(myData[myData.length-1])+4}" class="bench-axis" fill="#15803d">${myReturn.toFixed(0)}%</text>
+  `;
+  document.getElementById('bench-months').innerHTML = myData.map((_,i) => `<span>${months[i]||''}</span>`).join('');
+}
+
+/* ══════════════════════════════════════
+   WATCHLIST
+══════════════════════════════════════ */
+const SK_WATCH = 'tmj_watch_v1';
+function loadWatch() { try { return JSON.parse(localStorage.getItem(SK_WATCH)) || []; } catch { return []; } }
+function saveWatch(d) { try { localStorage.setItem(SK_WATCH, JSON.stringify(d)); } catch {} }
+
+function seedWatch() {
+  if (loadWatch().length) return;
+  saveWatch([
+    {id:1, ticker:'NVDA', name:'NVIDIA', thesis:'Dominant AI GPU market share. Waiting for a meaningful pullback before initiating a position — currently stretched on valuation.', alert:'below', price:780, tags:['AI','GPU','growth']},
+    {id:2, ticker:'SMCI', name:'Super Micro Computer', thesis:'Data center server builds for AI. High risk but high reward if supply chain concerns resolve. Watching for stability.', alert:'watching', price:null, tags:['AI','servers','speculative']},
+    {id:3, ticker:'NEE', name:'NextEra Energy', thesis:'Largest US renewable energy company. AI data center power demand is a long-term tailwind. Defensive with growth.', alert:'below', price:62, tags:['energy','dividend','defensive']},
+    {id:4, ticker:'PLTR', name:'Palantir', thesis:'AI software layer for enterprise and government. Expensive but product is genuinely differentiated. Watching for a re-entry after trimming.', alert:'below', price:24, tags:['AI','software','government']},
+  ]);
+}
+
+function renderWatchlist() {
+  const items = loadWatch();
+  document.getElementById('watch-count').textContent = items.length + ' stock' + (items.length!==1?'s':'');
+  document.getElementById('wl-total').textContent  = items.length;
+  document.getElementById('wl-buy').textContent    = items.filter(i=>i.alert==='below').length;
+  document.getElementById('wl-sell').textContent   = items.filter(i=>i.alert==='above').length;
+  document.getElementById('wl-watch').textContent  = items.filter(i=>i.alert==='watching').length;
+
+  const alertLabel = {below:'🟢 Buy below', above:'🔴 Sell above', watching:'👁 Watching'};
+  document.getElementById('watch-list').innerHTML = items.length
+    ? items.map(item => `
+      <div class="watch-item">
+        <div class="watch-row1">
+          <div><div class="watch-ticker">${item.ticker}</div><div class="watch-name">${item.name}</div></div>
+          <div class="watch-right">
+            <div class="watch-alert ${item.alert}">${alertLabel[item.alert]||'👁 Watching'}${item.price?' $'+item.price.toLocaleString():''}</div>
+            <button onclick="removeWatch(${item.id})" style="background:none;border:none;color:var(--ink-4);font-size:11px;margin-top:3px;cursor:pointer">Remove</button>
+          </div>
+        </div>
+        <div class="watch-thesis">${item.thesis}</div>
+        <div class="watch-tags">${(item.tags||[]).map(t=>`<span class="watch-tag">${t}</span>`).join('')}</div>
+      </div>`).join('')
+    : '<div style="text-align:center;padding:2rem;color:var(--ink-4);font-style:italic;font-size:14px">No stocks on watchlist yet — click "+ Add Stock"</div>';
+}
+
+function toggleWatchForm() {
+  document.getElementById('watch-form').classList.toggle('open');
+}
+
+function addWatchItem() {
+  const ticker = document.getElementById('wf-ticker').value.trim().toUpperCase();
+  const name   = document.getElementById('wf-name').value.trim();
+  const thesis = document.getElementById('wf-thesis').value.trim();
+  if (!ticker || !thesis) { showToast('Need at least a ticker and thesis'); return; }
+  const items = loadWatch();
+  items.push({
+    id: Date.now(), ticker, name: name||ticker,
+    thesis, alert: document.getElementById('wf-alert').value,
+    price: parseFloat(document.getElementById('wf-price').value)||null,
+    tags: document.getElementById('wf-tags').value.split(',').map(t=>t.trim()).filter(Boolean)
+  });
+  saveWatch(items);
+  ['wf-ticker','wf-name','wf-thesis','wf-price','wf-tags'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('watch-form').classList.remove('open');
+  renderWatchlist();
+  showToast('✓ Added to watchlist!');
+}
+
+function removeWatch(id) {
+  saveWatch(loadWatch().filter(i => i.id !== id));
+  renderWatchlist();
+  showToast('Removed from watchlist');
+}
+
+/* ══════════════════════════════════════
+   GLOSSARY
+══════════════════════════════════════ */
+const GLOSSARY = [
+  {term:'Alpha',cat:'Performance',def:'Returns earned above the benchmark (e.g. S&P 500). If the market returns 10% and your portfolio returns 14%, your alpha is +4%.', example:'My portfolio generated +4.2% alpha vs the S&P 500 last year.'},
+  {term:'Asset Allocation',cat:'Strategy',def:'How you divide your portfolio across different investment types — stocks, bonds, cash, real estate. Your allocation reflects your risk tolerance and goals.', example:'My allocation is 80% US stocks, 15% ETFs, 5% cash.'},
+  {term:'Bear Market',cat:'Market',def:'A market decline of 20% or more from recent highs, typically lasting several months. The opposite of a bull market.', example:'During the 2022 bear market, the S&P 500 fell ~25%.'},
+  {term:'Beta',cat:'Risk',def:'A measure of how much a stock moves relative to the market. Beta of 1 = moves with the market. Beta of 1.5 = moves 50% more than the market, up or down.', example:'GEV has a beta of ~1.3, meaning it\'s more volatile than the S&P 500.'},
+  {term:'Bull Market',cat:'Market',def:'A sustained rise in stock prices, typically defined as a 20% gain from recent lows. Usually accompanied by strong economic conditions.', example:'The 2023–2024 bull market was driven largely by AI optimism.'},
+  {term:'Buy and Hold',cat:'Strategy',def:'An investment strategy where you purchase stocks and hold them for years regardless of short-term price fluctuations, relying on long-term growth.', example:'My core positions — GEV, AMD, VRT — are buy and hold.'},
+  {term:'CAGR',cat:'Performance',def:'Compound Annual Growth Rate. The rate at which an investment grows each year to reach a target value, assuming reinvested gains. The gold standard for comparing returns over time.', example:'A $10,000 investment that grows to $21,589 in 8 years has a CAGR of 10%.'},
+  {term:'Capital Gains',cat:'Tax',def:'Profit made from selling an investment for more than you paid. Short-term gains (held under 1 year) are taxed as ordinary income. Long-term gains (held 1+ years) get lower tax rates.', example:'I sold AMD at a $3,200 long-term capital gain last quarter.'},
+  {term:'Conviction',cat:'Strategy',def:'How strongly you believe in an investment thesis. High conviction = large position size and willingness to hold through volatility. Low conviction = small position or watchlist only.', example:'GEV is my highest conviction pick — it\'s my largest position.'},
+  {term:'Cost Basis',cat:'Mechanics',def:'The original price you paid for a stock, including commissions. Used to calculate capital gains or losses when you sell.', example:'My cost basis on GEV is $228 per share from my initial buy.'},
+  {term:'Diversification',cat:'Strategy',def:'Spreading investments across different stocks, sectors, or asset types to reduce risk. The idea: don\'t put all eggs in one basket.', example:'Even though I\'m high conviction on AI infrastructure, I hold ETFs for diversification.'},
+  {term:'Dollar Cost Averaging',cat:'Strategy',def:'Investing a fixed dollar amount at regular intervals regardless of price. You buy more shares when prices are low and fewer when high, reducing average cost over time.', example:'I add $500 to AMD every month regardless of where the price is.'},
+  {term:'Drawdown',cat:'Risk',def:'The peak-to-trough decline in portfolio value before it recovers. A 20% drawdown means your portfolio fell 20% from its highest point.', example:'During Q4 2024, my portfolio experienced a 14% drawdown before recovering.'},
+  {term:'Due Diligence',cat:'Research',def:'The research and analysis you do before making an investment decision. Reading earnings reports, understanding the business model, evaluating competition.', example:'Before buying VRT, I spent two weeks on due diligence — reading their 10-K and earnings calls.'},
+  {term:'EPS',cat:'Fundamentals',def:'Earnings Per Share. A company\'s net profit divided by the number of outstanding shares. Higher and growing EPS generally signals a healthier business.', example:'AMD\'s EPS grew 45% year-over-year, which supported my conviction to add.'},
+  {term:'ETF',cat:'Vehicles',def:'Exchange-Traded Fund. A basket of stocks that trades on an exchange like a single stock. SPY tracks the S&P 500; QQQ tracks the NASDAQ 100. Low cost, instant diversification.', example:'I hold QQQ as my broad market exposure alongside individual stock picks.'},
+  {term:'FIRE',cat:'Strategy',def:'Financial Independence, Retire Early. A movement focused on saving and investing aggressively to achieve financial independence earlier than traditional retirement age.', example:'My $1M goal is the first milestone on my FIRE journey.'},
+  {term:'Float',cat:'Mechanics',def:'The number of shares of a company available for public trading. A low float stock can be more volatile because fewer shares are available to buy and sell.', example:'Small-cap stocks often have low floats, making them more volatile.'},
+  {term:'Free Cash Flow',cat:'Fundamentals',def:'Cash a company generates after paying its operating expenses and capital expenditures. Often considered a purer measure of profitability than earnings.', example:'GEV\'s growing free cash flow is a key part of my bull thesis.'},
+  {term:'Fundamental Analysis',cat:'Research',def:'Evaluating a stock based on the underlying business — revenue, earnings, debt, management quality, industry position. As opposed to technical analysis (chart patterns).', example:'My investment process is entirely fundamental — I don\'t use chart patterns.'},
+  {term:'Index Fund',cat:'Vehicles',def:'A fund that tracks a market index like the S&P 500. Passive, low-cost, and historically hard to beat over long periods. The foundation of many portfolios.', example:'The S&P 500 benchmark I measure myself against is an index fund.'},
+  {term:'Margin of Safety',cat:'Strategy',def:'Buying a stock at a significant discount to its estimated intrinsic value, providing a buffer against being wrong. A core concept in value investing popularized by Benjamin Graham.', example:'I waited for a 15% margin of safety before initiating my GEV position.'},
+  {term:'Market Cap',cat:'Fundamentals',def:'Market Capitalization. Total value of a company\'s outstanding shares. Share price × total shares. Large-cap: over $10B. Mid-cap: $2B–$10B. Small-cap: under $2B.', example:'GEV is a large-cap stock with a market cap over $80B.'},
+  {term:'P/E Ratio',cat:'Valuation',def:'Price-to-Earnings Ratio. Stock price divided by earnings per share. A higher P/E means investors are paying more for each dollar of earnings — often reflecting growth expectations.', example:'AMD trades at a high P/E because investors expect strong earnings growth.'},
+  {term:'Portfolio',cat:'Mechanics',def:'The collection of all your investments — stocks, ETFs, bonds, cash. Your portfolio is the total picture of your invested assets.', example:'My portfolio is currently 85% equities, 15% cash.'},
+  {term:'Position Size',cat:'Risk',def:'How much of your portfolio you allocate to a single investment, usually expressed as a percentage. Larger position = higher conviction, but also higher risk.', example:'GEV is my largest position at ~18% of my portfolio.'},
+  {term:'Rebalancing',cat:'Strategy',def:'Periodically adjusting your portfolio back to your target allocation by selling assets that have grown too large and buying those that are underweight.', example:'I rebalance my portfolio at the start of each quarter.'},
+  {term:'Risk/Reward',cat:'Strategy',def:'The ratio of potential profit to potential loss on a trade. A 3:1 risk/reward means you expect to make $3 for every $1 you risk. Good traders only take high R/R setups.', example:'I saw a 4:1 risk/reward setup on GEV at $305, which drove my add decision.'},
+  {term:'S&P 500',cat:'Market',def:'An index of 500 large US companies, considered the best single barometer of the US stock market. Most actively managed funds and investors are benchmarked against it.', example:'My benchmark is the S&P 500 — I try to beat it consistently.'},
+  {term:'Stop Loss',cat:'Risk',def:'A preset price at which you automatically sell a position to limit losses. Helps remove emotion from sell decisions.', example:'I set a 15% stop loss on my speculative positions.'},
+  {term:'Technical Analysis',cat:'Research',def:'Analyzing stocks using price charts and trading volume patterns to predict future price movements. Contrasts with fundamental analysis.', example:'I primarily use fundamentals, but I use basic technicals to time entries.'},
+  {term:'Thesis',cat:'Strategy',def:'Your investment rationale for buying a stock — the core reason you believe it will increase in value over time. If the thesis breaks, you should re-evaluate the position.', example:'My GEV thesis: AI data centers need 3× more power by 2030.'},
+  {term:'Volatility',cat:'Risk',def:'How much and how quickly a stock\'s price fluctuates. High volatility = bigger swings up and down. Measured by standard deviation or the VIX index for the overall market.', example:'Small cap stocks have higher volatility than large cap blue chips.'},
+  {term:'Yield',cat:'Income',def:'Income returned from an investment, usually as a percentage. Dividend yield = annual dividend / stock price. A $100 stock paying $3/year has a 3% yield.', example:'CAT offers a ~2% dividend yield, adding income to my growth thesis.'},
+];
+
+function renderGlossary(filter='', letter='') {
+  const search = filter.toLowerCase();
+  const filtered = GLOSSARY.filter(g => {
+    const matchSearch = !search || g.term.toLowerCase().includes(search) || g.def.toLowerCase().includes(search) || g.cat.toLowerCase().includes(search);
+    const matchLetter = !letter || g.term[0].toUpperCase() === letter;
+    return matchSearch && matchLetter;
+  });
+
+  // Group by first letter
+  const groups = {};
+  filtered.forEach(g => {
+    const l = g.term[0].toUpperCase();
+    if (!groups[l]) groups[l] = [];
+    groups[l].push(g);
+  });
+
+  const html = Object.keys(groups).sort().map(l => `
+    <div class="gloss-group">
+      <div class="gloss-letter">${l}</div>
+      ${groups[l].map(g => `
+        <div class="gloss-item">
+          <div class="gloss-term">${g.term} <span class="gloss-category">${g.cat}</span></div>
+          <div class="gloss-def">${g.def}</div>
+          ${g.example ? `<div class="gloss-example">"${g.example}"</div>` : ''}
+        </div>`).join('')}
+    </div>`).join('');
+
+  document.getElementById('gloss-content').innerHTML = html || '<div class="gloss-empty">No terms found for "' + filter + '"</div>';
+
+  // Alpha buttons
+  const letters = [...new Set(GLOSSARY.map(g => g.term[0].toUpperCase()))].sort();
+  document.getElementById('gloss-alpha').innerHTML =
+    `<button class="alpha-btn${!letter?' on':''}" onclick="filterGlossaryLetter('')">All</button>` +
+    letters.map(l => `<button class="alpha-btn${l===letter?' on':''}" onclick="filterGlossaryLetter('${l}')">${l}</button>`).join('');
+}
+
+let glossLetter = '';
+function filterGlossary() {
+  glossLetter = '';
+  renderGlossary(document.getElementById('gloss-search').value, '');
+}
+function filterGlossaryLetter(l) {
+  glossLetter = l;
+  document.getElementById('gloss-search').value = '';
+  renderGlossary('', l);
+}
+
+/* ── Boot ─────────────────────────────── */
+seed();
+seedWatch();
+renderFeed();
+updateProgress();
+updateTipUI();
+initTicker();
+initVisitors();
+renderPoll();
+renderBenchmark();
+renderGlossary();
+
+const _sv = showView;
+showView = function(name) {
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('on'));
+  document.getElementById('view-' + name).classList.add('on');
+  document.querySelectorAll('.nav-a').forEach(a => {
+    a.classList.toggle('on', a.getAttribute('onclick')?.includes("'" + name + "'"));
+  });
+  window.scrollTo(0, 0);
+  if (name === 'trades')    renderTradeTable('all');
+  if (name === 'portfolio') { updatePortfolioView(); renderBenchmark(); }
+  if (name === 'watchlist') renderWatchlist();
+  if (name === 'glossary')  renderGlossary();
+};
+</script>
+</body>
+</html>
